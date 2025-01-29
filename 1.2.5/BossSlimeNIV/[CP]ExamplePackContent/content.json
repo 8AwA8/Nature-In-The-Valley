@@ -1,0 +1,10 @@
+{
+   "Format": "2.0.6",
+   "Changes": [
+        {
+            "Action": "Load",
+            "Target": "Mods/NITVExample/BossSlime, Mods/NITVExample/BossSlimeItem",
+            "FromFile": "PNGs/{{TargetWithoutPath}}.png"
+        }
+   ]
+}

@@ -1,0 +1,219 @@
+{
+   "Format": "2.0.6",
+   "Changes": [
+        {
+            "Action": "Load",
+            "Target": "Mods/NatureInTheValley/Creatures/Items,Mods/NatureInTheValley/Creatures/Hat,Mods/NatureInTheValley/Creatures/Shirt,Mods/NatureInTheValley/Creatures/BlueringOctopus,Mods/NatureInTheValley/Creatures/Mudskipper,Mods/NatureInTheValley/Creatures/Antlion,Mods/NatureInTheValley/Creatures/FireFly,Mods/NatureInTheValley/Creatures/Chameleon,Mods/NatureInTheValley/Creatures/HoneyAnt,Mods/NatureInTheValley/Creatures/GoldenStag,Mods/NatureInTheValley/Creatures/JuneBeetle,Mods/NatureInTheValley/Creatures/CaveBeetle,Mods/NatureInTheValley/Creatures/SandWorm,Mods/NatureInTheValley/Creatures/TigerBeetle,Mods/NatureInTheValley/Creatures/BlisterBeetle,Mods/NatureInTheValley/Creatures/WispOfWinter,Mods/NatureInTheValley/Creatures/DivingBeetle,Mods/NatureInTheValley/Creatures/Tuatara,Mods/NatureInTheValley/Creatures/StickBug,Mods/NatureInTheValley/Creatures/CaveCrayfish,Mods/NatureInTheValley/Creatures/CaveSalamander,Mods/NatureInTheValley/Creatures/SnappingTurtle,Mods/NatureInTheValley/Creatures/Moth,Mods/NatureInTheValley/Creatures/SeaTurtle,Mods/NatureInTheValley/Creatures/SandFlea,Mods/NatureInTheValley/Creatures/StAndrewsSpider, Mods/NatureInTheValley/Creatures/PotterWasp,Mods/NatureInTheValley/Creatures/Bee,Mods/NatureInTheValley/Creatures/CactusCrab,Mods/NatureInTheValley/Creatures/RegalMoth,Mods/NatureInTheValley/Creatures/HickoryHornedDevil,Mods/NatureInTheValley/Creatures/MonarchCaterpillar,Mods/NatureInTheValley/Creatures/YellowGrassCaterpillar,Mods/NatureInTheValley/Creatures/PeriodicalCicada,Mods/NatureInTheValley/Creatures/AnnualCicada,Mods/NatureInTheValley/Creatures/LadyBug,Mods/NatureInTheValley/Creatures/TreeFrog,Mods/NatureInTheValley/Creatures/Bullfrog,Mods/NatureInTheValley/Creatures/CaneToad,Mods/NatureInTheValley/Creatures/FlyingFish,Mods/NatureInTheValley/Creatures/CapeCobra,Mods/NatureInTheValley/Creatures/HermitCrab,Mods/NatureInTheValley/Creatures/Millipede,Mods/NatureInTheValley/Creatures/Centipede,Mods/NatureInTheValley/Creatures/BlackWitchMoth,Mods/NatureInTheValley/Creatures/MonarchButterfly,Mods/NatureInTheValley/Creatures/WeidemeyersAdmiral,Mods/NatureInTheValley/Creatures/BlueAxolotl,Mods/NatureInTheValley/Creatures/Axolotl,Mods/NatureInTheValley/Creatures/MarineIguana,Mods/NatureInTheValley/Creatures/ThornyDevil,Mods/NatureInTheValley/Creatures/LeopardGecko,Mods/NatureInTheValley/Creatures/BeardedDragon,Mods/NatureInTheValley/Creatures/FrilledLizard,Mods/NatureInTheValley/Creatures/YellowSpottedLizard,Mods/NatureInTheValley/Creatures/BlueTonguedSkink,Mods/NatureInTheValley/Creatures/Scorpion,Mods/NatureInTheValley/Creatures/DesertWhiteTail,Mods/NatureInTheValley/Creatures/FireAnt,Mods/NatureInTheValley/Creatures/BlackAnt,/Mods/NatureInTheValley/Creatures/DesertLocust,Mods/NatureInTheValley/Creatures/OrchidMantis,Mods/NatureInTheValley/Creatures/BarkBeetle,Mods/NatureInTheValley/Creatures/SweetGemBeetle,Mods/NatureInTheValley/Creatures/EarthWorm,Mods/NatureInTheValley/Creatures/GiantPetaltail,Mods/NatureInTheValley/Creatures/EarthWorm,Mods/NatureInTheValley/Creatures/ScarletDarner,Mods/NatureInTheValley/Creatures/GreenDarner,Mods/NatureInTheValley/Creatures/AtlasMoth,Mods/NatureInTheValley/Creatures/Slug,Mods/NatureInTheValley/Creatures/PillBug,Mods/NatureInTheValley/Creatures/PlantHopper,Mods/NatureInTheValley/Creatures/WharfRoach,Mods/NatureInTheValley/Creatures/Grasshopper,Mods/NatureInTheValley/Creatures/GarterSnake,Mods/NatureInTheValley/Creatures/PondSkater,Mods/NatureInTheValley/Creatures/CoralSnake,Mods/NatureInTheValley/Creatures/JewelBeetle,Mods/NatureInTheValley/Creatures/CommonButterfly,Mods/NatureInTheValley/Creatures/SmallGrassYellowButterfly,Mods/NatureInTheValley/Creatures/AgriasButterfly,Mods/NatureInTheValley/Creatures/StagBeetle,Mods/NatureInTheValley/Creatures/HerculesBeetle,Mods/NatureInTheValley/Creatures/Cricket,Mods/NatureInTheValley/Creatures/GardenSnail,Mods/NatureInTheValley/Creatures/PrayingMantis,Mods/NatureInTheValley/Creatures/FunnelWebSpider",
+            "FromFile": "PNGs/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Mods/NatureInTheValley/Maps/InsectariumInterior",
+            "FromFile": "MapStuff/{{TargetWithoutPath}}.tbin"
+        },
+   	{
+      "Action": "EditData",
+      "Target": "Strings/UI",
+      "Entries": {
+	"Chat_NITVDonate": "{{i18n: Donate}}"
+	}
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Quests",
+            "Entries": {
+          "NIVjadeQuest1": "ItemDelivery/{{i18n: QuestTitle}}/{{i18n: QuestDesc}}/{{i18n: Quest1Clear}}/Jade NatInValley.Creature.GardenSnail 2/-1/500/-1/false/{{i18n: QuestResponse}}",
+          "NIVjadeQuest2": "ItemDelivery/{{i18n: QuestTitle}}/{{i18n: QuestDesc}}/{{i18n: Quest2Clear}}/Jade NatInValley.Creature.Cricket 2/-1/500/-1/false/{{i18n: QuestResponse}}",
+          "NIVjadeQuest3": "ItemDelivery/{{i18n: QuestTitle}}/{{i18n: QuestDesc}}/{{i18n: Quest3Clear}}/Jade NatInValley.Creature.BarkBeetle 2/-1/500/-1/false/{{i18n: QuestResponse}}",
+          "NIVjadeQuest4": "ItemDelivery/{{i18n: QuestTitle}}/{{i18n: QuestDesc}}/{{i18n: Quest4Clear}}/Jade NatInValley.Creature.SandFlea 2/-1/500/-1/false/{{i18n: QuestResponse}}"
+          }
+              },
+	{
+            "Action": "Load",
+            "Target": "Mods/NatureInTheValley/Maps/NatValleyOutsideInsec",
+            "FromFile": "MapStuff/{{TargetWithoutPath}}.tmx"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Hats",
+            "Entries": {
+                "NIVSurveyerhat": "Surveyer/{{i18n: NIVHatD}}/false/true//{{i18n: NIVHat}}/0/Mods\\NatureInTheValley\\Creatures\\Hat"
+            }
+        },
+	{
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "NIVNetSwing": {
+                    "ID": "NIVNetSwing",
+                    "FilePaths": [ "{{AbsoluteFilePath: netswing.ogg}}" ],
+                    "Category": "Music",
+                    "StreamedVorbis": false,
+                    "Looped": false
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Shirts",
+            "Entries": {
+                "NIVSurveyerShirt": {
+                    "Name": "SurveyerShirt",
+                    "DisplayName": "{{i18n: NIVShirt}}",
+                    "Description": "{{i18n: NIVShirtD}}", 
+                    "Price": 0,
+                    "Texture": "Mods\\NatureInTheValley\\Creatures\\Shirt",
+                    "SpriteIndex": 0
+                }
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Locations",
+            "Entries": {
+            "NIVOuterInsec": {
+		        "DisplayName": "OutsideInsectarium",
+                    "DefaultArrivalTile": {
+                        "X": 24,
+                        "Y": 39
+                    },
+                 "CreateOnLoad": {
+                        "AlwaysActive": false,
+                        "MapPath": "Mods/NatureInTheValley/Maps/NatValleyOutsideInsec"
+                    },
+                "CanPlantHere": false,
+                "ExcludeFromNpcPathfinding": false,
+                "MinDailyForageSpawn": 1,
+                "Fish": [
+                {
+                    "Id": "LOCATION_FISH Forest BOBBER_X BOBBER_Y WATER_DEPTH",
+                    "ItemId": "LOCATION_FISH Forest BOBBER_X BOBBER_Y WATER_DEPTH",
+                    "RandomItemId": null,
+                    "MaxItems": null,
+                    "MinStack": -1,
+                    "MaxStack": -1,
+                    "Quality": -1,
+                    "ObjectInternalName": null,
+                    "ObjectDisplayName": null,
+                    "ObjectColor": null,
+                    "ToolUpgradeLevel": -1,
+                    "IsRecipe": false,
+                    "StackModifiers": null,
+                    "StackModifierMode": 0,
+                    "QualityModifiers": null,
+                    "QualityModifierMode": 0,
+                    "ModData": null,
+                    "PerItemCondition": null,
+                    "Condition": null,
+                    "Chance": 0.99,
+                    "Season": null,
+                    "FishAreaId": null,
+                    "BobberPosition": null,
+                    "PlayerPosition": null,
+                    "MinFishingLevel": 0,
+                    "MinDistanceFromShore": 0,
+                    "MaxDistanceFromShore": -1,
+                    "ApplyDailyLuck": false,
+                    "CuriosityLureBuff": -1,
+                    "SpecificBaitBuff": 0,
+                    "SpecificBaitMultiplier": 2,
+                    "CatchLimit": -1,
+                    "CanUseTrainingRod": null,
+                    "IsBossFish": false,
+                    "SetFlagOnCatch": null,
+                    "RequireMagicBait": false,
+                    "Precedence": 0,
+                    "IgnoreFishDataRequirements": true,
+                    "CanBeInherited": true,
+                    "ChanceModifiers": null,
+                    "ChanceModifierMode": 0,
+                    "ChanceBoostPerLuckLevel": 0,
+                    "UseFishCaughtSeededRandom": false
+                }
+            ],
+                "MaxDailyForageSpawn": 4,
+                "MaxSpawnedForageAtOnce": 6
+                },
+            "NIVInnerInsec": {
+		        "DisplayName": "InsideInsectarium",
+                    "DefaultArrivalTile": {
+                        "X": 40,
+                        "Y": 52
+                    },
+                 "CreateOnLoad": {
+                        "AlwaysActive": true,
+                        "MapPath": "Mods/NatureInTheValley/Maps/InsectariumInterior"
+                    },
+                "CanPlantHere": false,
+                "ExcludeFromNpcPathfinding": false
+                }
+            }
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/IvyInsectarium",
+            "FromFile": "Character/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Characters/Dialogue/IvyInsectarium",
+            "FromFile": "Dialogue/{{TargetWithoutPath}}.json"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/IvyInsectarium",
+            "Entries": 
+            {
+                "Mon": "{{i18n:IvyInsectarium.Mon}}",
+                "Tue": "{{i18n:IvyInsectarium.Tue}}",
+                "Wed": "{{i18n:IvyInsectarium.Wed}}",
+                "Thu": "{{i18n:IvyInsectarium.Thu}}",
+                "Fri": "{{i18n:IvyInsectarium.Fri}}",
+                "Sat": "{{i18n:IvyInsectarium.Sat}}",
+                "Sun": "{{i18n:IvyInsectarium.Sun}}"
+            }
+          },
+        {
+            "Action": "Load",
+            "Target": "Portraits/IvyInsectarium",
+            "FromFile": "Portraits/{{TargetWithoutPath}}.png"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "IvyInsectarium": {
+                "DisplayName": "{{i18n: IvyInsectarium.Name}}",
+                "Gender": "Female",
+                "SocialAnxiety": "Outgoing",
+                "Optimism": "Positive",
+                "CanSocialize": false,
+                "SpawnIfMissing": true,
+                "Home": [
+                    {
+                    "ID": "Default",
+                    "Location": "NIVInnerInsec",
+                    "Tile": {"X": 41, "Y": 39},
+                    "Direction": "down"
+                    }
+                ]
+                
+             }
+            }
+        },
+{
+    	"Action": "EditData",
+    	"Target": "Mods/Cherry.TrainStation/Destinations",
+    	"Entries": {
+        "{{ModId}}_OuterInsec": {
+            "Id": "{{ModId}}_OuterInsec",
+            "DisplayName": "Insectarium",
+            "ToLocation": "OuterInsectarium",
+            "ToTile": { "X": 24, "Y": 39 },
+	    "Cost": 75
+        }
+    	}
+}
+
+   ]
+}

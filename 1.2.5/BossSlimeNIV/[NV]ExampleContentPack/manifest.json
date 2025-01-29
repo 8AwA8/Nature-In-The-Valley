@@ -1,0 +1,11 @@
+{
+    "Name": "NVSlimeBoss",
+    "Author": "Nature",
+    "Version": "1.0.0",
+    "Description": "Another example pack for NITV",
+    "UniqueID": "Nature.SlimeGuyNITV",
+    "UpdateKeys": [""],
+    "ContentPackFor": {
+        "UniqueID": "Nature.NatureInTheValley"
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "IvyInsectarium.Name": "Ivy",
+  "IvyInsectarium.Mon": "Cada estación trae consigo un abanico único de flora y fauna.#$b# Durante todo el año, podría entretenerme con todo lo que encuentro en los arbustos.",
+  "IvyInsectarium.Tue": "No sé qué le ha pasado al valle, para que se revuelvan todas estas criaturas.#$b#Quizá el destino esté del lado de los fanáticos como yo.",
+  "IvyInsectarium.Wed": "Cómo me gustaría que mis piernas y mis reflejos pudieran moverse como antes.",
+  "IvyInsectarium.Thu": "¿Me has traído algo nuevo hoy?#$b#Algún día sé que este lugar estará más lleno que nunca.",
+  "IvyInsectarium.Fri": "Ayer intenté atrapar un escarabajo ciervo...#$b#De alguna manera, ¡acabé con la red encima de mi propia cabeza!",
+  "IvyInsectarium.Sat": "Diferentes lugares y climas pueden tener diferentes variedades de criaturas.#$b#Así que, ¡esta atento cuando llueva!",
+  "IvyInsectarium.Sun": "Las leyendas dicen que existe un bicho casi mágicamente dulce en las profundidades del bosque.#$b# No sé qué puede tener de dulce un bicho, ¡pero me pica la curiosidad!",
+  "NIVHat": "Sombrero de topógrafo",
+  "NIVHatD": "Un simple sombrero para protegerse del sol y de los insectos.",
+  "NIVShirt": "Camisa de topógrafo",
+  "NIVShirtD": "Un uniforme fabricado pensando en la práctica, con el logotipo del insectario.",
+"Donate": "{0} donó una {1}",
+"QuestTitle": "Caza de Insectos",  
+"QuestDesc": "Jade quiere investigar una criatura específica",  
+"QuestResponse": "¡Gracias por reunirlos para mí!",  
+"Quest1Clear": "lleva a Jade 2 Caracoles de Jardín",  
+"Quest2Clear": "lleva a Jade 2 Grillos",  
+"Quest3Clear": "lleva a Jade 2 Escarabajos de Corteza",  
+"Quest4Clear": "lleva a Jade 2 Pulgas de Arena"  
+}

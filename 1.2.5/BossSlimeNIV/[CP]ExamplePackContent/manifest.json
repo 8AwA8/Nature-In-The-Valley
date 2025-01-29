@@ -1,0 +1,11 @@
+{
+    "Name": "NIVBossSlimeContent",
+    "Author": "Nature",
+    "Version": "1.0.0",
+    "Description": "",
+    "UniqueID": "Nature.NIVBossContent",
+    "UpdateKeys": [""],
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}

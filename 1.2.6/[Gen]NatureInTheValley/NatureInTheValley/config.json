@@ -1,0 +1,11 @@
+{
+  "spawnRateMultiplier": 1.0,
+  "creaturePriceMultiplier": 1.0,
+  "maxcreaturelLimitMultiplier": 1.0,
+  "addCreaturesToShippingCollection": false,
+  "catchingDifficultyMultiplier": 1.0,
+  "KeyForEncy": "I + LeftShift",
+  "useOnlyContentPacks": false,
+  "useTerrariumWallpapers": false,
+  "includeChargeSound": true
+}

@@ -1,0 +1,11 @@
+{
+    "Name": "NVBiggerPack",
+    "Author": "Nature",
+    "Version": "1.2.5",
+    "Description": "Added pack for NITV",
+    "UniqueID": "Nature.BiggerCreatures",
+    "UpdateKeys": ["Nexus:30138"],
+    "ContentPackFor": {
+        "UniqueID": "Nature.NatureInTheValley"
+    }
+}

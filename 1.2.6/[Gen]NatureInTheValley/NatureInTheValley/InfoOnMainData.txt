@@ -1,0 +1,30 @@
+Uses format of type 
+"Name": "Rarity/IsGrounded/Speed/StopTime/Scale/DoesRun/isMover/PlayerRange/Dangerous/Season/WeatherCode/LocationCode/MinTime/MaxTime/FramesPerAnim/Texture/XShadowOffset/LocalLocationType/YShadowOffset/Price/SpriteIndex/XPos in museum/Ypos in museum"
+
+Rarities:
+Common
+Uncommon
+Rare
+Very Rare
+Exquisite
+
+Weather codes:
+0-All weather
+1-All sunny weather
+2-All wet weather
+3-Storms
+4-Snow
+
+Location codes:
+0-All outdoor locations
+1-Grassy based locations
+2-Beachy / water locations
+3-Cave locations
+4-Desert location
+
+Local Location Codes:
+0-Just around the place
+1-On trees
+2-On Bushes
+3-On Water
+4-On large stumps
