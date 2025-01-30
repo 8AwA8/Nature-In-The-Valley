@@ -15,7 +15,7 @@ namespace NatureInTheValley
 	// Token: 0x0200000A RID: 10
 	internal class ClickIntoCreatureInfoMenu : IClickableMenu
 	{
-		// Token: 0x0600009A RID: 154 RVA: 0x0000A70C File Offset: 0x0000890C
+		// Token: 0x0600009D RID: 157 RVA: 0x0000B478 File Offset: 0x00009678
 		public ClickIntoCreatureInfoMenu()
 		{
 			this._title = "Creatures In The Valley";
@@ -65,7 +65,7 @@ namespace NatureInTheValley
 			base.initializeUpperRightCloseButton();
 		}
 
-		// Token: 0x0600009B RID: 155 RVA: 0x0000AB4C File Offset: 0x00008D4C
+		// Token: 0x0600009E RID: 158 RVA: 0x0000B8B8 File Offset: 0x00009AB8
 		public override void receiveLeftClick(int x, int y, bool playSound = true)
 		{
 			base.receiveLeftClick(x, y, true);
@@ -91,7 +91,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x0600009C RID: 156 RVA: 0x0000AC44 File Offset: 0x00008E44
+		// Token: 0x0600009F RID: 159 RVA: 0x0000B9B0 File Offset: 0x00009BB0
 		public override void draw(SpriteBatch b)
 		{
 			if (!Game1.options.showMenuBackground)
@@ -119,7 +119,7 @@ namespace NatureInTheValley
 			base.drawMouse(b, false, -1);
 		}
 
-		// Token: 0x0600009D RID: 157 RVA: 0x0000AE70 File Offset: 0x00009070
+		// Token: 0x060000A0 RID: 160 RVA: 0x0000BBDC File Offset: 0x00009DDC
 		public static void ExitFunction()
 		{
 			if (Game1.currentLocation.Name == "NIVInnerInsec")
@@ -128,7 +128,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x0600009E RID: 158 RVA: 0x0000AECC File Offset: 0x000090CC
+		// Token: 0x060000A1 RID: 161 RVA: 0x0000BC38 File Offset: 0x00009E38
 		public override void performHoverAction(int x, int y)
 		{
 			for (int i = 96 * this.currentPage; i < Math.Min(this.creatureCount, 96 * (this.currentPage + 1)); i++)
@@ -140,25 +140,25 @@ namespace NatureInTheValley
 			base.performHoverAction(x, y);
 		}
 
-		// Token: 0x04000050 RID: 80
+		// Token: 0x04000052 RID: 82
 		private string hoverText = "";
 
-		// Token: 0x04000051 RID: 81
+		// Token: 0x04000053 RID: 83
 		public List<ClickableTextureComponent> Collection = new List<ClickableTextureComponent>();
 
-		// Token: 0x04000052 RID: 82
+		// Token: 0x04000054 RID: 84
 		private int currentPage;
 
-		// Token: 0x04000053 RID: 83
+		// Token: 0x04000055 RID: 85
 		private string _title;
 
-		// Token: 0x04000054 RID: 84
+		// Token: 0x04000056 RID: 86
 		private readonly bool IsAndroid = Constants.TargetPlatform == GamePlatform.Android;
 
-		// Token: 0x04000055 RID: 85
+		// Token: 0x04000057 RID: 87
 		private int creatureCount;
 
-		// Token: 0x04000056 RID: 86
+		// Token: 0x04000058 RID: 88
 		public List<ClickableTextureComponent> arrows = new List<ClickableTextureComponent>();
 	}
 }

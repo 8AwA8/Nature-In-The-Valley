@@ -17,7 +17,7 @@ namespace NatureInTheValley
 	[XmlInclude(typeof(Terrarium))]
 	public class Terrarium : Furniture
 	{
-		// Token: 0x060000FB RID: 251 RVA: 0x0000C914 File Offset: 0x0000AB14
+		// Token: 0x060000FE RID: 254 RVA: 0x0000D680 File Offset: 0x0000B880
 		public Terrarium(string itemId, Vector2 tile) : base(itemId, tile)
 		{
 			this.data = NatureInTheValleyEntry.staticCreatureData[itemId.Split("Tera.NatInValley.Creature.", StringSplitOptions.None)[1]];
@@ -28,7 +28,7 @@ namespace NatureInTheValley
 			this.defaultBoundingBox.Value = new Rectangle(this.defaultBoundingBox.X, this.defaultBoundingBox.Y, this.defaultBoundingBox.Width * 2, this.defaultBoundingBox.Height);
 		}
 
-		// Token: 0x060000FC RID: 252 RVA: 0x0000CA2C File Offset: 0x0000AC2C
+		// Token: 0x060000FF RID: 255 RVA: 0x0000D798 File Offset: 0x0000B998
 		public override void actionOnPlayerEntryOrPlacement(GameLocation environment, bool dropDown)
 		{
 			this.data = NatureInTheValleyEntry.staticCreatureData[this.itemId.Value.Split("Tera.NatInValley.Creature.", StringSplitOptions.None)[1]];
@@ -39,13 +39,13 @@ namespace NatureInTheValley
 			base.actionOnPlayerEntryOrPlacement(environment, dropDown);
 		}
 
-		// Token: 0x060000FD RID: 253 RVA: 0x00002791 File Offset: 0x00000991
+		// Token: 0x06000100 RID: 256 RVA: 0x0000279F File Offset: 0x0000099F
 		protected override Item GetOneNew()
 		{
 			return new Terrarium(base.ItemId, this.tileLocation.Value);
 		}
 
-		// Token: 0x060000FE RID: 254 RVA: 0x0000CB00 File Offset: 0x0000AD00
+		// Token: 0x06000101 RID: 257 RVA: 0x0000D86C File Offset: 0x0000BA6C
 		public override void updateWhenCurrentLocation(GameTime time)
 		{
 			GameLocation currentLocation = Game1.currentLocation;
@@ -133,19 +133,19 @@ namespace NatureInTheValley
 			base.updateWhenCurrentLocation(time);
 		}
 
-		// Token: 0x060000FF RID: 255 RVA: 0x000027A9 File Offset: 0x000009A9
+		// Token: 0x06000102 RID: 258 RVA: 0x000027B7 File Offset: 0x000009B7
 		public override bool placementAction(GameLocation location, int x, int y, Farmer who = null)
 		{
 			return base.placementAction(location, x, y, who);
 		}
 
-		// Token: 0x06000100 RID: 256 RVA: 0x000027B6 File Offset: 0x000009B6
+		// Token: 0x06000103 RID: 259 RVA: 0x000027C4 File Offset: 0x000009C4
 		public float GetGlassDrawLayer()
 		{
 			return this.GetBaseDrawLayer() + 0.0001f;
 		}
 
-		// Token: 0x06000101 RID: 257 RVA: 0x0000CE5C File Offset: 0x0000B05C
+		// Token: 0x06000104 RID: 260 RVA: 0x0000DBC8 File Offset: 0x0000BDC8
 		public float GetBaseDrawLayer()
 		{
 			if (this.furniture_type.Value == 12)
@@ -155,7 +155,7 @@ namespace NatureInTheValley
 			return (float)(this.boundingBox.Value.Bottom - ((this.furniture_type.Value == 6 || this.furniture_type.Value == 13) ? 48 : 8)) / 10000f;
 		}
 
-		// Token: 0x06000102 RID: 258 RVA: 0x0000CEBC File Offset: 0x0000B0BC
+		// Token: 0x06000105 RID: 261 RVA: 0x0000DC28 File Offset: 0x0000BE28
 		public override void draw(SpriteBatch spriteBatch, int x, int y, float alpha = 1f)
 		{
 			Vector2 zero = Vector2.Zero;
@@ -190,7 +190,7 @@ namespace NatureInTheValley
 			spriteBatch.Draw(this.GetFrontTexture(), Game1.GlobalToLocal(Game1.viewport, vector + zero), new Rectangle?(new Rectangle(0, 0, 128, 128)), Color.White * alpha, 0f, Vector2.Zero, 1f, this.flipped.Value ? SpriteEffects.FlipHorizontally : SpriteEffects.None, this.GetGlassDrawLayer() + 0.0001f);
 		}
 
-		// Token: 0x06000103 RID: 259 RVA: 0x0000D2CC File Offset: 0x0000B4CC
+		// Token: 0x06000106 RID: 262 RVA: 0x0000E038 File Offset: 0x0000C238
 		public List<string> GetData()
 		{
 			if (this.data == null || this.data.Count < 1)
@@ -200,7 +200,7 @@ namespace NatureInTheValley
 			return this.data;
 		}
 
-		// Token: 0x06000104 RID: 260 RVA: 0x000027C4 File Offset: 0x000009C4
+		// Token: 0x06000107 RID: 263 RVA: 0x000027D2 File Offset: 0x000009D2
 		public Texture2D GetFrontTexture()
 		{
 			if (this.FrontTexture == null)
@@ -210,7 +210,7 @@ namespace NatureInTheValley
 			return this.FrontTexture;
 		}
 
-		// Token: 0x06000105 RID: 261 RVA: 0x000027EE File Offset: 0x000009EE
+		// Token: 0x06000108 RID: 264 RVA: 0x000027FC File Offset: 0x000009FC
 		public Texture2D GetBackTexture()
 		{
 			if (this.bgTexture == null)
@@ -220,12 +220,12 @@ namespace NatureInTheValley
 			return this.bgTexture;
 		}
 
-		// Token: 0x06000106 RID: 262 RVA: 0x00002823 File Offset: 0x00000A23
+		// Token: 0x06000109 RID: 265 RVA: 0x00002831 File Offset: 0x00000A31
 		public Terrarium()
 		{
 		}
 
-		// Token: 0x06000107 RID: 263 RVA: 0x0000283D File Offset: 0x00000A3D
+		// Token: 0x0600010A RID: 266 RVA: 0x0000284B File Offset: 0x00000A4B
 		public Texture2D GetAddedTexture()
 		{
 			if (this.AddedTexture == null)
@@ -235,7 +235,7 @@ namespace NatureInTheValley
 			return this.AddedTexture;
 		}
 
-		// Token: 0x06000108 RID: 264 RVA: 0x0000D320 File Offset: 0x0000B520
+		// Token: 0x0600010B RID: 267 RVA: 0x0000E08C File Offset: 0x0000C28C
 		private string GetLocation()
 		{
 			if (this.GetData()[11].Contains("3"))
@@ -253,7 +253,7 @@ namespace NatureInTheValley
 			return "1";
 		}
 
-		// Token: 0x06000109 RID: 265 RVA: 0x0000D390 File Offset: 0x0000B590
+		// Token: 0x0600010C RID: 268 RVA: 0x0000E0FC File Offset: 0x0000C2FC
 		private string GetLocal()
 		{
 			if (this.GetData()[17] == "1" && (this.GetLocation() == "2" || this.GetLocation() == "4"))
@@ -279,7 +279,7 @@ namespace NatureInTheValley
 			return "1";
 		}
 
-		// Token: 0x0600010A RID: 266 RVA: 0x00002872 File Offset: 0x00000A72
+		// Token: 0x0600010D RID: 269 RVA: 0x00002880 File Offset: 0x00000A80
 		public Texture2D GetBackBackTexture()
 		{
 			if (this.BackBackdrop == null)
@@ -289,7 +289,7 @@ namespace NatureInTheValley
 			return this.BackBackdrop;
 		}
 
-		// Token: 0x0600010B RID: 267 RVA: 0x0000D464 File Offset: 0x0000B664
+		// Token: 0x0600010E RID: 270 RVA: 0x0000E1D0 File Offset: 0x0000C3D0
 		public override void drawInMenu(SpriteBatch spriteBatch, Vector2 location, float scaleSize, float transparency, float layerDepth, StackDrawType drawStackNumber, Color color, bool drawShadow)
 		{
 			base.drawInMenu(spriteBatch, location, scaleSize, transparency, layerDepth, drawStackNumber, color, drawShadow);
@@ -299,7 +299,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x0600010C RID: 268 RVA: 0x000028A7 File Offset: 0x00000AA7
+		// Token: 0x0600010F RID: 271 RVA: 0x000028B5 File Offset: 0x00000AB5
 		public ParsedItemData GetItemTexture()
 		{
 			if (this.itemTexture == null)
@@ -310,7 +310,7 @@ namespace NatureInTheValley
 		}
 
 		// Token: 0x17000012 RID: 18
-		// (get) Token: 0x0600010D RID: 269 RVA: 0x000028D5 File Offset: 0x00000AD5
+		// (get) Token: 0x06000110 RID: 272 RVA: 0x000028E3 File Offset: 0x00000AE3
 		public override string DisplayName
 		{
 			get
@@ -319,41 +319,41 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x04000088 RID: 136
+		// Token: 0x0400008A RID: 138
 		[XmlIgnore]
 		public bool fishDirty = true;
 
-		// Token: 0x04000089 RID: 137
+		// Token: 0x0400008B RID: 139
 		[XmlIgnore]
 		private Texture2D bgTexture;
 
-		// Token: 0x0400008A RID: 138
+		// Token: 0x0400008C RID: 140
 		public List<string> data = new List<string>();
 
-		// Token: 0x0400008B RID: 139
-		protected AnimatedSprite Sprite;
-
-		// Token: 0x0400008C RID: 140
-		[XmlIgnore]
-		private Texture2D FrontTexture;
-
 		// Token: 0x0400008D RID: 141
-		[XmlIgnore]
-		private Texture2D AddedTexture;
+		protected AnimatedSprite Sprite;
 
 		// Token: 0x0400008E RID: 142
 		[XmlIgnore]
-		private float xOffset;
+		private Texture2D FrontTexture;
 
 		// Token: 0x0400008F RID: 143
 		[XmlIgnore]
-		private bool left;
+		private Texture2D AddedTexture;
 
 		// Token: 0x04000090 RID: 144
 		[XmlIgnore]
-		private Texture2D BackBackdrop;
+		private float xOffset;
 
 		// Token: 0x04000091 RID: 145
+		[XmlIgnore]
+		private bool left;
+
+		// Token: 0x04000092 RID: 146
+		[XmlIgnore]
+		private Texture2D BackBackdrop;
+
+		// Token: 0x04000093 RID: 147
 		[XmlIgnore]
 		private ParsedItemData itemTexture;
 	}

@@ -12,7 +12,7 @@ namespace NatureInTheValley
 	// Token: 0x0200000C RID: 12
 	internal class CreatureHighlightPage : IClickableMenu
 	{
-		// Token: 0x060000A3 RID: 163 RVA: 0x0000AF54 File Offset: 0x00009154
+		// Token: 0x060000A6 RID: 166 RVA: 0x0000BCC0 File Offset: 0x00009EC0
 		public CreatureHighlightPage(Item item)
 		{
 			this.Item = item;
@@ -43,7 +43,7 @@ namespace NatureInTheValley
 			base.initializeUpperRightCloseButton();
 		}
 
-		// Token: 0x060000A4 RID: 164 RVA: 0x0000B1E4 File Offset: 0x000093E4
+		// Token: 0x060000A7 RID: 167 RVA: 0x0000BF50 File Offset: 0x0000A150
 		public override void draw(SpriteBatch b)
 		{
 			if (!Game1.options.showMenuBackground)
@@ -162,13 +162,13 @@ namespace NatureInTheValley
 			base.drawMouse(b, false, -1);
 		}
 
-		// Token: 0x060000A5 RID: 165 RVA: 0x00002575 File Offset: 0x00000775
+		// Token: 0x060000A8 RID: 168 RVA: 0x00002583 File Offset: 0x00000783
 		public static void ExitFunction()
 		{
 			Game1.activeClickableMenu = new ClickIntoCreatureInfoMenu();
 		}
 
-		// Token: 0x060000A6 RID: 166 RVA: 0x0000BCBC File Offset: 0x00009EBC
+		// Token: 0x060000A9 RID: 169 RVA: 0x0000CA28 File Offset: 0x0000AC28
 		private string CodeToLoc(string c)
 		{
 			if (c == "0")
@@ -198,7 +198,7 @@ namespace NatureInTheValley
 			return c;
 		}
 
-		// Token: 0x060000A7 RID: 167 RVA: 0x0000BD90 File Offset: 0x00009F90
+		// Token: 0x060000AA RID: 170 RVA: 0x0000CAFC File Offset: 0x0000ACFC
 		private string GetTimeFromTime(string time)
 		{
 			int num = int.Parse(time);
@@ -224,31 +224,31 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x0400005A RID: 90
+		// Token: 0x0400005C RID: 92
 		private List<string> data = new List<string>();
 
-		// Token: 0x0400005B RID: 91
+		// Token: 0x0400005D RID: 93
 		private string name;
 
-		// Token: 0x0400005C RID: 92
+		// Token: 0x0400005E RID: 94
 		private Item Item;
 
-		// Token: 0x0400005D RID: 93
+		// Token: 0x0400005F RID: 95
 		private bool donated;
 
-		// Token: 0x0400005E RID: 94
+		// Token: 0x04000060 RID: 96
 		private string hoverText = "";
 
-		// Token: 0x0400005F RID: 95
+		// Token: 0x04000061 RID: 97
 		private int currentPage;
 
-		// Token: 0x04000060 RID: 96
+		// Token: 0x04000062 RID: 98
 		private string _title;
 
-		// Token: 0x04000061 RID: 97
+		// Token: 0x04000063 RID: 99
 		private ITranslationHelper translation;
 
-		// Token: 0x04000062 RID: 98
+		// Token: 0x04000064 RID: 100
 		private Texture2D backGround;
 	}
 }

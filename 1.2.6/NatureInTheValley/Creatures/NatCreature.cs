@@ -11,7 +11,7 @@ namespace Creatures
 	// Token: 0x02000006 RID: 6
 	public class NatCreature
 	{
-		// Token: 0x0600006B RID: 107 RVA: 0x00008DB4 File Offset: 0x00006FB4
+		// Token: 0x0600006E RID: 110 RVA: 0x00009B90 File Offset: 0x00007D90
 		public virtual void Draw(SpriteBatch b)
 		{
 			if (this.scale < 0.08f)
@@ -22,14 +22,14 @@ namespace Creatures
 			this.Sprite.draw(b, Game1.GlobalToLocal(Game1.viewport, this.Position) + new Vector2((float)this.Sprite.SpriteWidth / 2f - (float)(this.Sprite.SpriteWidth - 32), (float)((!this.IsGrounded) ? -90 : 0) - (float)(this.Sprite.SpriteHeight - 32)), (float)boundingBox.Center.Y / 10000f, 0, this.heightOffGround, Color.White, false, this.scale * 1.2f, 0f, false);
 		}
 
-		// Token: 0x0600006C RID: 108 RVA: 0x00008E70 File Offset: 0x00007070
+		// Token: 0x0600006F RID: 111 RVA: 0x00009C4C File Offset: 0x00007E4C
 		public Vector2 getLocalPosition(xTile.Dimensions.Rectangle viewport)
 		{
 			Vector2 position = this.Position;
 			return new Vector2(position.X - (float)viewport.X, position.Y - (float)viewport.Y);
 		}
 
-		// Token: 0x0600006D RID: 109 RVA: 0x00008EA8 File Offset: 0x000070A8
+		// Token: 0x06000070 RID: 112 RVA: 0x00009C84 File Offset: 0x00007E84
 		public virtual Microsoft.Xna.Framework.Rectangle GetBoundingBox()
 		{
 			if (this.Sprite == null)
@@ -40,7 +40,7 @@ namespace Creatures
 			return new Microsoft.Xna.Framework.Rectangle((int)position.X + 8, (int)position.Y + 16, this.Sprite.SpriteWidth, this.Sprite.SpriteHeight + ((this.scale > 3f && this.IsGrounded) ? 12 : 0));
 		}
 
-		// Token: 0x0600006E RID: 110 RVA: 0x00008F14 File Offset: 0x00007114
+		// Token: 0x06000071 RID: 113 RVA: 0x00009CF0 File Offset: 0x00007EF0
 		public virtual void DrawShadow(SpriteBatch b)
 		{
 			if (this.scale < 0.9f)
@@ -50,7 +50,7 @@ namespace Creatures
 			b.Draw(Game1.shadowTexture, Game1.GlobalToLocal(Game1.viewport, this.Position) + new Vector2((float)this.Sprite.SpriteWidth * 1.4f + (float)this.shadowXOffset - (float)(this.Sprite.SpriteWidth - 32), (float)this.Sprite.SpriteHeight * 1.1f + (float)this.shadowYOffset - (float)(this.Sprite.SpriteHeight - 32)), new Microsoft.Xna.Framework.Rectangle?(Game1.shadowTexture.Bounds), Color.White, 0f, new Vector2((float)Game1.shadowTexture.Bounds.Center.X, (float)Game1.shadowTexture.Bounds.Center.Y), 2f, SpriteEffects.None, Math.Max(0f, (float)this.GetBoundingBox().Center.Y / 10000f) - 1E-06f);
 		}
 
-		// Token: 0x0600006F RID: 111 RVA: 0x00009028 File Offset: 0x00007228
+		// Token: 0x06000072 RID: 114 RVA: 0x00009E04 File Offset: 0x00008004
 		public virtual void Update(GameTime time)
 		{
 			this.jumpTime += time.ElapsedGameTime.Milliseconds;
@@ -131,7 +131,7 @@ namespace Creatures
 			}
 		}
 
-		// Token: 0x06000070 RID: 112 RVA: 0x00009374 File Offset: 0x00007574
+		// Token: 0x06000073 RID: 115 RVA: 0x0000A150 File Offset: 0x00008350
 		public virtual void UpdateAnim(GameTime time)
 		{
 			if (!this.has5FrameLines)
@@ -248,7 +248,7 @@ namespace Creatures
 			}
 		}
 
-		// Token: 0x06000071 RID: 113 RVA: 0x00009690 File Offset: 0x00007890
+		// Token: 0x06000074 RID: 116 RVA: 0x0000A46C File Offset: 0x0000866C
 		public virtual bool TimeChange()
 		{
 			if (this.isStatic)
@@ -271,45 +271,45 @@ namespace Creatures
 			return this.scale < 0.09f;
 		}
 
-		// Token: 0x06000072 RID: 114 RVA: 0x00009728 File Offset: 0x00007928
+		// Token: 0x06000075 RID: 117 RVA: 0x0000A504 File Offset: 0x00008704
 		private bool ValidPosition(Vector2 position)
 		{
 			new Location((int)(position.X / 64f), (int)(position.Y / 64f));
 			return this.currentLocation.map != null && (this.LocalLocationCode == 3 ^ !this.currentLocation.isWaterTile((int)(position / 64f).X, (int)(position / 64f).Y)) && !this.currentLocation.IsTileOccupiedBy(new Vector2((float)((int)(position / 64f).X), (float)((int)(position / 64f).Y)), ~(CollisionMask.Characters | CollisionMask.Farmers | CollisionMask.Flooring), CollisionMask.None, false) && this.currentLocation.isTilePassable(new Vector2((float)((int)(position / 64f).X), (float)((int)(position / 64f).Y)));
 		}
 
-		// Token: 0x06000073 RID: 115 RVA: 0x00002491 File Offset: 0x00000691
+		// Token: 0x06000076 RID: 118 RVA: 0x0000249F File Offset: 0x0000069F
 		public GameLocation GetLocation()
 		{
 			return this.currentLocation;
 		}
 
-		// Token: 0x06000074 RID: 116 RVA: 0x00002499 File Offset: 0x00000699
+		// Token: 0x06000077 RID: 119 RVA: 0x000024A7 File Offset: 0x000006A7
 		public void SetLocation(GameLocation l)
 		{
 			this.currentLocation = l;
 		}
 
-		// Token: 0x06000075 RID: 117 RVA: 0x000024A2 File Offset: 0x000006A2
+		// Token: 0x06000078 RID: 120 RVA: 0x000024B0 File Offset: 0x000006B0
 		public int GetFrame()
 		{
 			return this.Sprite.currentFrame;
 		}
 
-		// Token: 0x06000076 RID: 118 RVA: 0x000024AF File Offset: 0x000006AF
+		// Token: 0x06000079 RID: 121 RVA: 0x000024BD File Offset: 0x000006BD
 		public void SetSprite(int i)
 		{
 			this.Sprite.currentFrame = i;
 			this.Sprite.UpdateSourceRect();
 		}
 
-		// Token: 0x06000077 RID: 119 RVA: 0x00009814 File Offset: 0x00007A14
+		// Token: 0x0600007A RID: 122 RVA: 0x0000A5F0 File Offset: 0x000087F0
 		public Vector2 GetEffectivePosition()
 		{
 			return this.Position + new Vector2(22f * (float)this.Sprite.SpriteWidth / 32f, 22f * (float)this.Sprite.SpriteHeight / 32f) * this.scale;
 		}
 
-		// Token: 0x06000078 RID: 120 RVA: 0x0000986C File Offset: 0x00007A6C
+		// Token: 0x0600007B RID: 123 RVA: 0x0000A648 File Offset: 0x00008848
 		private Vector2 GetComplexDesiredForFarmer(Farmer farmer)
 		{
 			if (Vector2.Distance(farmer.Position, this.Position) < 128f)
@@ -318,19 +318,19 @@ namespace Creatures
 			}
 			Vector2 zero = Vector2.Zero;
 			Vector2 zero2 = Vector2.Zero;
-			if (farmer.Position.X > this.Position.X + 40f)
+			if (farmer.Position.X > this.GetEffectivePosition().X + 40f)
 			{
 				zero = new Vector2(64f, 0f);
 			}
-			else if (farmer.Position.X < this.Position.X - 40f)
+			else if (farmer.Position.X < this.GetEffectivePosition().X - 40f)
 			{
 				zero = new Vector2(-64f, 0f);
 			}
-			if (farmer.Position.Y > this.Position.Y + 40f)
+			if (farmer.Position.Y > this.GetEffectivePosition().Y + 40f)
 			{
 				zero2 = new Vector2(0f, 64f);
 			}
-			else if (farmer.Position.Y < this.Position.Y - 40f)
+			else if (farmer.Position.Y < this.GetEffectivePosition().Y - 40f)
 			{
 				zero2 = new Vector2(0f, -64f);
 			}
@@ -350,26 +350,21 @@ namespace Creatures
 				}
 				return this.Position + zero2 / 2f;
 			}
-			else if (this.ValidPosition(this.GetEffectivePosition() + zero / 2f))
+			else
 			{
+				if (!this.ValidPosition(this.GetEffectivePosition() + zero / 2f))
+				{
+					return farmer.Position;
+				}
 				if (this.ValidPosition(this.GetEffectivePosition() + zero))
 				{
 					return this.Position + zero;
 				}
 				return this.Position + zero / 2f;
 			}
-			else
-			{
-				Vector2 vector = new Vector2((float)Game1.random.Next(-180, 180), (float)Game1.random.Next(-180, 180));
-				if (this.ValidPosition(this.GetEffectivePosition() + vector / 2f) && this.ValidPosition(this.GetEffectivePosition() + vector))
-				{
-					return this.Position + vector;
-				}
-				return farmer.Position;
-			}
 		}
 
-		// Token: 0x06000079 RID: 121 RVA: 0x00009B08 File Offset: 0x00007D08
+		// Token: 0x0600007C RID: 124 RVA: 0x0000A874 File Offset: 0x00008A74
 		public NatCreature(Vector2 position, GameLocation location, string Name, int rarity, bool isGrounded, float speed, int stopTime, float scale, bool DoesRun, bool isMover, int PlayerRange, bool dangerous, List<string> seasons, int weatherCode, List<string> locationCode, int MinTime, int MaxTime, int FramesPerAnim, string textureName, int offsetShad, int localLocationCode, int offsetShadY, bool isStatic, int width, int height, bool hasFiveFrameLines)
 		{
 			this.Sprite = new AnimatedSprite();
@@ -412,109 +407,109 @@ namespace Creatures
 			this.Sprite.UpdateSourceRect();
 		}
 
-		// Token: 0x04000023 RID: 35
+		// Token: 0x04000025 RID: 37
 		public float speed;
 
-		// Token: 0x04000024 RID: 36
+		// Token: 0x04000026 RID: 38
 		public int stopTime;
 
-		// Token: 0x04000025 RID: 37
+		// Token: 0x04000027 RID: 39
 		public int jumpTime;
 
-		// Token: 0x04000026 RID: 38
+		// Token: 0x04000028 RID: 40
 		public float scale;
 
-		// Token: 0x04000027 RID: 39
+		// Token: 0x04000029 RID: 41
 		private int LifeTime;
 
-		// Token: 0x04000028 RID: 40
+		// Token: 0x0400002A RID: 42
 		public int shadowXOffset;
 
-		// Token: 0x04000029 RID: 41
+		// Token: 0x0400002B RID: 43
 		public string name;
 
-		// Token: 0x0400002A RID: 42
+		// Token: 0x0400002C RID: 44
 		public int LocalLocationCode;
 
-		// Token: 0x0400002B RID: 43
+		// Token: 0x0400002D RID: 45
 		public int savedRange;
 
-		// Token: 0x0400002C RID: 44
+		// Token: 0x0400002E RID: 46
 		public int shadowYOffset;
 
-		// Token: 0x0400002D RID: 45
+		// Token: 0x0400002F RID: 47
 		public bool chasing;
 
-		// Token: 0x0400002E RID: 46
+		// Token: 0x04000030 RID: 48
 		private int oscillations;
 
-		// Token: 0x0400002F RID: 47
+		// Token: 0x04000031 RID: 49
 		public bool isStatic;
 
-		// Token: 0x04000030 RID: 48
+		// Token: 0x04000032 RID: 50
 		protected AnimatedSprite Sprite;
 
-		// Token: 0x04000031 RID: 49
+		// Token: 0x04000033 RID: 51
 		public int heightOffGround;
 
-		// Token: 0x04000032 RID: 50
+		// Token: 0x04000034 RID: 52
 		public bool isMover;
 
-		// Token: 0x04000033 RID: 51
+		// Token: 0x04000035 RID: 53
 		public bool IsEmoting;
 
-		// Token: 0x04000034 RID: 52
+		// Token: 0x04000036 RID: 54
 		public bool DoesRun;
 
-		// Token: 0x04000035 RID: 53
+		// Token: 0x04000037 RID: 55
 		public bool IsGrounded;
 
-		// Token: 0x04000036 RID: 54
+		// Token: 0x04000038 RID: 56
 		protected GameLocation currentLocation;
 
-		// Token: 0x04000037 RID: 55
+		// Token: 0x04000039 RID: 57
 		public Vector2 desiredPos;
 
-		// Token: 0x04000038 RID: 56
+		// Token: 0x0400003A RID: 58
 		public bool isMoving;
 
-		// Token: 0x04000039 RID: 57
+		// Token: 0x0400003B RID: 59
 		public List<string> Seasons;
 
-		// Token: 0x0400003A RID: 58
+		// Token: 0x0400003C RID: 60
 		public int WeatherCode;
 
-		// Token: 0x0400003B RID: 59
+		// Token: 0x0400003D RID: 61
 		public int Rarity;
 
-		// Token: 0x0400003C RID: 60
+		// Token: 0x0400003E RID: 62
 		public int PlayerRange;
 
-		// Token: 0x0400003D RID: 61
+		// Token: 0x0400003F RID: 63
 		public bool Dangerous;
 
-		// Token: 0x0400003E RID: 62
+		// Token: 0x04000040 RID: 64
 		public int MinTime;
 
-		// Token: 0x0400003F RID: 63
+		// Token: 0x04000041 RID: 65
 		public int MaxTime;
 
-		// Token: 0x04000040 RID: 64
+		// Token: 0x04000042 RID: 66
 		public bool isRunning;
 
-		// Token: 0x04000041 RID: 65
+		// Token: 0x04000043 RID: 67
 		public Vector2 Position;
 
-		// Token: 0x04000042 RID: 66
+		// Token: 0x04000044 RID: 68
 		public List<string> LocationCode;
 
-		// Token: 0x04000043 RID: 67
+		// Token: 0x04000045 RID: 69
 		public bool has5FrameLines;
 
-		// Token: 0x04000044 RID: 68
+		// Token: 0x04000046 RID: 70
 		public int width;
 
-		// Token: 0x04000045 RID: 69
+		// Token: 0x04000047 RID: 71
 		public int height;
 	}
 }

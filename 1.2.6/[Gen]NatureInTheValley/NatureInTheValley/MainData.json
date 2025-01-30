@@ -1,5 +1,5 @@
 {
-    "CommonButterfly": "0/false/0.005/0/1.75/true/true/0/false/spring,summer,fall,winter/0/1,1/600/1600/4/Mods\\NatureInTheValley\\Creatures\\CommonButterFly/0/0/0/80/1/60/15/Mods\\NatureInTheValley\\Creatures\\Items/CommonButterfly/Butterfly/32/32/ /10/false",
+    "CommonButterfly": "0/false/0.005/0/1.75/true/true/0/false/spring,summer,fall,winter/0/1,1/600/1600/4/Mods\\NatureInTheValley\\Creatures\\CommonButterFly/0/0/0/80/1/60/15/Mods\\NatureInTheValley\\Creatures\\Items/CommonButterfly/Butterfly/32/32/ /4/false",
     "Moth": "0/false/0.004/0/1.5/true/true/0/false/spring,summer,fall,winter/0/0,1/1900/2600/4/Mods\\NatureInTheValley\\Creatures\\Moth/0/0/0/50/65/32/11",
     "SmallGrassYellowButterfly": "0/false/0.007/0/1.6/true/true/1/false/summer,fall/1/0,1,2/1000/2000/4/Mods\\NatureInTheValley\\Creatures\\SmallGrassYellowButterfly/0/0/0/110/2/44/20",
     "GreenDarner": "0/false/0.008/0/1.4/true/true/1/false/spring,summer/0/1,1/600/2000/4/Mods\\NatureInTheValley\\Creatures\\GreenDarner/0/0/0/120/3/35/13",
@@ -40,7 +40,7 @@
     "LadyBug" : "1/false/0.0003/1200/1.3/true/false/3/false/spring,summer/0/0,1/1000/1800/1/Mods\\NatureInTheValley\\Creatures\\LadyBug/-6/2/-84/175/29/55/23.7",
     "PlantHopper" : "1/false/0.0003/1200/1.3/true/false/3/false/spring,summer/0/0,1/600/2600/4/Mods\\NatureInTheValley\\Creatures\\PlantHopper/-6/2/-84/175/30/59/12.7",
     "StickBug": "1/false/0.005/0/1.2/true/false/2/false/fall,fall/0/0,1/600/2600/1/Mods\\NatureInTheValley\\Creatures\\StickBug/2/1/0/100/69/65.75/13.6",
-    "FireFly": "1/false/0.004/0/1.6/true/true/0/false/spring,summer/1/0,1/1900/2600/4/Mods\\NatureInTheValley\\Creatures\\FireFly/0/0/0/90/81/32/11",
+    "FireFly": "1/false/0.004/0/1.6/true/true/0/false/spring,summer/1/0,1/1900/2600/4/Mods\\NatureInTheValley\\Creatures\\FireFly/0/0/0/90/81/32/11/Mods\\NatureInTheValley\\Creatures\\Items/Firefly/Shiny/32/32/ /4/false",
     "Antlion" : "1/true/0.0003/850/0.89/true/true/0/false/spring,summer,fall,winter/0/4,4/600/2600/4/Mods\\NatureInTheValley\\Creatures\\Antlion/-16/0/-3/100/82/65/44",
     "MonarchCaterpillar" : "1/false/0.0003/1200/1.2/true/false/1/false/spring,summer/1/1,4/600/2600/4/Mods\\NatureInTheValley\\Creatures\\MonarchCaterpillar/-6/2/-84/220/31/71/26.7",
     "Bee": "1/false/0.007/0/1.45/true/true/2/false/spring,summer/1/0,1/600/1700/4/Mods\\NatureInTheValley\\Creatures\\Bee/1/0/0/200/32/45/13",

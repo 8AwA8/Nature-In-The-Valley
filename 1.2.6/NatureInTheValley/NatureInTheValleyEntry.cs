@@ -28,7 +28,7 @@ namespace NatureInTheValley
 	// Token: 0x02000004 RID: 4
 	internal sealed class NatureInTheValleyEntry : Mod
 	{
-		// Token: 0x06000003 RID: 3 RVA: 0x00002B70 File Offset: 0x00000D70
+		// Token: 0x06000003 RID: 3 RVA: 0x00002B90 File Offset: 0x00000D90
 		public override void Entry(IModHelper helper)
 		{
 			this.helper = helper;
@@ -91,6 +91,7 @@ namespace NatureInTheValley
 			helper.Events.GameLoop.GameLaunched += this.OnLaunch;
 			helper.Events.Display.MenuChanged += this.MenuChanged;
 			helper.Events.World.LargeTerrainFeatureListChanged += this.RemovedLargeTerrain;
+			helper.Events.Content.AssetsInvalidated += this.OnAssetsInvalidated;
 			helper.Events.GameLoop.DayStarted += this.DayStarted;
 			helper.Events.Display.RenderedWorld += this.renderPostWorld;
 			helper.Events.Content.AssetRequested += this.OnAssetRequested;
@@ -115,7 +116,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000004 RID: 4 RVA: 0x000031C8 File Offset: 0x000013C8
+		// Token: 0x06000004 RID: 4 RVA: 0x00003204 File Offset: 0x00001404
 		public NatureInTheValleyEntry()
 		{
 			this.locationalData = new Dictionary<string, List<string>>();
@@ -183,7 +184,7 @@ namespace NatureInTheValley
 			this.spawnChance = 1.0;
 		}
 
-		// Token: 0x06000005 RID: 5 RVA: 0x0000343C File Offset: 0x0000163C
+		// Token: 0x06000005 RID: 5 RVA: 0x00003478 File Offset: 0x00001678
 		public void OnWarp(object sender, WarpedEventArgs eventArgs)
 		{
 			if (eventArgs.NewLocation != null && eventArgs.NewLocation.Name != null)
@@ -229,7 +230,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000006 RID: 6 RVA: 0x00003660 File Offset: 0x00001860
+		// Token: 0x06000006 RID: 6 RVA: 0x0000369C File Offset: 0x0000189C
 		private static void CreatureDrawer(GameLocation __instance, SpriteBatch b)
 		{
 			foreach (NatCreature natCreature in NatureInTheValleyEntry.creatures)
@@ -469,7 +470,7 @@ namespace NatureInTheValley
 			NatureInTheValleyEntry.creatures = new List<NatCreature>();
 		}
 
-		// Token: 0x06000008 RID: 8 RVA: 0x0000474C File Offset: 0x0000294C
+		// Token: 0x06000008 RID: 8 RVA: 0x00004788 File Offset: 0x00002988
 		private static void Ticking(GameLocation __instance, GameTime time)
 		{
 			if (__instance.wasUpdated || !Game1.shouldTimePass(false))
@@ -486,7 +487,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000009 RID: 9 RVA: 0x000047C8 File Offset: 0x000029C8
+		// Token: 0x06000009 RID: 9 RVA: 0x00004804 File Offset: 0x00002A04
 		public void TimeChange(object sender, TimeChangedEventArgs e)
 		{
 			if (Game1.currentLocation == null || Game1.currentLocation.Name == "NIVInnerInsec")
@@ -516,11 +517,15 @@ namespace NatureInTheValley
 			this.locationalData = this.CreaturesForArea(Game1.currentLocation);
 		}
 
-		// Token: 0x0600000A RID: 10 RVA: 0x00004930 File Offset: 0x00002B30
+		// Token: 0x0600000A RID: 10 RVA: 0x0000496C File Offset: 0x00002B6C
 		public void Instantiate(string name, Vector2 tile, GameLocation location)
 		{
 			List<string> list = this.creatureData[name];
 			NatureInTheValleyEntry.creatures.Add(new NatCreature(tile * 64f, location, name, int.Parse(list[0]), list[1] == "true", float.Parse(list[2]), int.Parse(list[3]), float.Parse(list[4]), list[5] == "true", list[6] == "true", int.Parse(list[7]), list[8] == "true", new List<string>(list[9].Split(',', StringSplitOptions.None)), int.Parse(list[10]), new List<string>(list[11].Split(',', StringSplitOptions.None)), int.Parse(list[12]), int.Parse(list[13]), int.Parse(list[14]), list[15], int.Parse(list[16]), int.Parse(list[17]), int.Parse(list[18]), false, (list.Count > 26) ? int.Parse(list[26]) : 32, (list.Count > 27) ? int.Parse(list[27]) : 32, list[list.Count - 1] == "true"));
+			TriggerActionManager.Raise("NAT_NIV_Spawned", new object[]
+			{
+				name
+			}, location, null, null, null);
 		}
 
 		// Token: 0x0600000B RID: 11 RVA: 0x00002084 File Offset: 0x00000284
@@ -532,7 +537,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x0600000C RID: 12 RVA: 0x00004AC4 File Offset: 0x00002CC4
+		// Token: 0x0600000C RID: 12 RVA: 0x00004B18 File Offset: 0x00002D18
 		public Dictionary<string, List<string>> CreaturesForArea(GameLocation location)
 		{
 			Dictionary<string, List<string>> dictionary = new Dictionary<string, List<string>>();
@@ -573,7 +578,7 @@ namespace NatureInTheValley
 			return dictionary;
 		}
 
-		// Token: 0x0600000D RID: 13 RVA: 0x00004D40 File Offset: 0x00002F40
+		// Token: 0x0600000D RID: 13 RVA: 0x00004D94 File Offset: 0x00002F94
 		public List<Vector2> GetTrees(GameLocation location)
 		{
 			List<Vector2> list = new List<Vector2>();
@@ -596,7 +601,7 @@ namespace NatureInTheValley
 			return list;
 		}
 
-		// Token: 0x0600000E RID: 14 RVA: 0x00004DF8 File Offset: 0x00002FF8
+		// Token: 0x0600000E RID: 14 RVA: 0x00004E4C File Offset: 0x0000304C
 		public List<Vector2> GetBushes(GameLocation location)
 		{
 			List<Vector2> list = new List<Vector2>();
@@ -610,7 +615,7 @@ namespace NatureInTheValley
 			return list;
 		}
 
-		// Token: 0x0600000F RID: 15 RVA: 0x00004E74 File Offset: 0x00003074
+		// Token: 0x0600000F RID: 15 RVA: 0x00004EC8 File Offset: 0x000030C8
 		public void ClearUnclaimedCreatures(GameLocation location)
 		{
 			if (location.farmers.Count > 0)
@@ -627,7 +632,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000010 RID: 16 RVA: 0x00004ED8 File Offset: 0x000030D8
+		// Token: 0x06000010 RID: 16 RVA: 0x00004F2C File Offset: 0x0000312C
 		public List<Vector2> GetStumps(GameLocation location)
 		{
 			List<Vector2> list = new List<Vector2>();
@@ -641,7 +646,7 @@ namespace NatureInTheValley
 			return list;
 		}
 
-		// Token: 0x06000011 RID: 17 RVA: 0x00004F60 File Offset: 0x00003160
+		// Token: 0x06000011 RID: 17 RVA: 0x00004FB4 File Offset: 0x000031B4
 		public List<Vector2> GetWater(GameLocation location)
 		{
 			List<Vector2> list = new List<Vector2>();
@@ -662,7 +667,7 @@ namespace NatureInTheValley
 			return list;
 		}
 
-		// Token: 0x06000012 RID: 18 RVA: 0x0000501C File Offset: 0x0000321C
+		// Token: 0x06000012 RID: 18 RVA: 0x00005070 File Offset: 0x00003270
 		private bool CheckForBugAtTile(GameLocation location, Vector2 pos, float distance)
 		{
 			foreach (NatCreature natCreature in NatureInTheValleyEntry.creatures)
@@ -675,7 +680,7 @@ namespace NatureInTheValley
 			return false;
 		}
 
-		// Token: 0x06000013 RID: 19 RVA: 0x00005080 File Offset: 0x00003280
+		// Token: 0x06000013 RID: 19 RVA: 0x000050D4 File Offset: 0x000032D4
 		public void RemovedResource(object sender)
 		{
 			this.stumpPos = this.GetStumps(Game1.currentLocation);
@@ -701,7 +706,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000014 RID: 20 RVA: 0x00005184 File Offset: 0x00003384
+		// Token: 0x06000014 RID: 20 RVA: 0x000051D8 File Offset: 0x000033D8
 		private void setUpPositionalWarp(GameLocation a)
 		{
 			if (!base.Helper.ModRegistry.IsLoaded("hootless.BusLocations") || !base.Helper.ModRegistry.IsLoaded("Nature.NIVBL"))
@@ -721,7 +726,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000015 RID: 21 RVA: 0x000052A8 File Offset: 0x000034A8
+		// Token: 0x06000015 RID: 21 RVA: 0x000052FC File Offset: 0x000034FC
 		private bool StartBossFadeHandle(GameLocation location, string[] args, Farmer player, Point point)
 		{
 			if (Game1.player.Money < 100)
@@ -735,7 +740,7 @@ namespace NatureInTheValley
 			return true;
 		}
 
-		// Token: 0x06000016 RID: 22 RVA: 0x00005308 File Offset: 0x00003508
+		// Token: 0x06000016 RID: 22 RVA: 0x0000535C File Offset: 0x0000355C
 		private static void PostTextFunction(GameLocation __instance, Response answer)
 		{
 			if (__instance.lastQuestionKey == null || __instance.afterQuestion != null)
@@ -770,20 +775,73 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000017 RID: 23 RVA: 0x0000543C File Offset: 0x0000363C
+		// Token: 0x06000017 RID: 23 RVA: 0x00005490 File Offset: 0x00003690
 		public void Command(string common, string[] args)
 		{
 			this.Instantiate(args[0], Game1.player.Tile, Game1.player.currentLocation);
 			Game1.player.addItemByMenuIfNecessary(new Terrarium("Tera.NatInValley.Creature." + args[0], new Vector2(30f, 30f)), null, false);
 		}
 
-		// Token: 0x06000018 RID: 24 RVA: 0x00005494 File Offset: 0x00003694
+		// Token: 0x06000018 RID: 24 RVA: 0x000054E8 File Offset: 0x000036E8
 		public void OnLaunch(object sender, GameLaunchedEventArgs eventArgs)
 		{
 			this.helper.ModRegistry.GetApi<ISpaceCoreAPI>("spacechase0.SpaceCore").RegisterSerializerType(typeof(NatInValeyNet));
 			this.helper.ModRegistry.GetApi<ISpaceCoreAPI>("spacechase0.SpaceCore").RegisterSerializerType(typeof(NatInValeyGoldenNet));
 			this.helper.ModRegistry.GetApi<ISpaceCoreAPI>("spacechase0.SpaceCore").RegisterSerializerType(typeof(NatInValeyJadeNet));
 			this.helper.ModRegistry.GetApi<ISpaceCoreAPI>("spacechase0.SpaceCore").RegisterSerializerType(typeof(Terrarium));
+			foreach (KeyValuePair<string, CreatureModel> keyValuePair in Game1.content.Load<Dictionary<string, CreatureModel>>("Nature.NITV/Creatures"))
+			{
+				List<string> value2 = new List<string>
+				{
+					keyValuePair.Value.rarity.ToString(),
+					keyValuePair.Value.grounded.ToString().ToLower(),
+					keyValuePair.Value.speed.ToString(),
+					keyValuePair.Value.pauseTime.ToString(),
+					keyValuePair.Value.scale.ToString(),
+					keyValuePair.Value.doesRun.ToString().ToLower(),
+					keyValuePair.Value.isMover.ToString().ToLower(),
+					keyValuePair.Value.range.ToString(),
+					keyValuePair.Value.dangerous.ToString().ToLower(),
+					keyValuePair.Value.seasons.Join(null, ","),
+					keyValuePair.Value.weatherCode,
+					keyValuePair.Value.locations.Join(null, ","),
+					keyValuePair.Value.minTime.ToString(),
+					keyValuePair.Value.maxTime.ToString(),
+					keyValuePair.Value.frames.ToString(),
+					keyValuePair.Value.spritePath,
+					keyValuePair.Value.xShadow.ToString(),
+					keyValuePair.Value.localSpawnCode,
+					keyValuePair.Value.yShadow.ToString(),
+					keyValuePair.Value.price.ToString(),
+					keyValuePair.Value.spriteIndex.ToString(),
+					keyValuePair.Value.xDef.ToString(),
+					keyValuePair.Value.yDef.ToString(),
+					keyValuePair.Value.itemTexture.ToString(),
+					keyValuePair.Value.displayName,
+					keyValuePair.Value.displayDescription,
+					keyValuePair.Value.xSpriteSize.ToString(),
+					keyValuePair.Value.ySpriteSize.ToString(),
+					keyValuePair.Value.GSQ,
+					keyValuePair.Value.packSize.ToString(),
+					keyValuePair.Value.compelxAnims.ToString().ToLower()
+				};
+				if (this.creatureData.ContainsKey(keyValuePair.Key))
+				{
+					this.creatureData.Remove(keyValuePair.Key);
+				}
+				this.creatureData.Add(keyValuePair.Key, value2);
+			}
+			NatureInTheValleyEntry.staticCreatureData = this.creatureData;
+			this.helper.GameContent.InvalidateCache("Data/Furniture");
+			this.helper.GameContent.InvalidateCache("Data/Objects");
+			foreach (KeyValuePair<string, RewardModel> keyValuePair2 in Game1.content.Load<Dictionary<string, RewardModel>>("Nature.NITV/Rewards"))
+			{
+				if (NatureInTheValleyEntry.customRewards.ContainsKey(keyValuePair2.Key))
+				{
+					NatureInTheValleyEntry.customRewards.Remove(keyValuePair2.Key);
+				}
+				NatureInTheValleyEntry.customRewards.Add(keyValuePair2.Key, keyValuePair2.Value);
+			}
 			IGenericModConfigMenuApi api = base.Helper.ModRegistry.GetApi<IGenericModConfigMenuApi>("spacechase0.GenericModConfigMenu");
 			IToolbarIconsApi api2 = base.Helper.ModRegistry.GetApi<IToolbarIconsApi>("furyx639.ToolbarIcons");
 			if (api2 != null)
@@ -812,6 +870,7 @@ namespace NatureInTheValley
 			GameStateQuery.Register("NAT_NIV_SpawnedSpecific", new GameStateQueryDelegate(NatureInTheValleyEntry.SpawnedSpecificGSQ));
 			TriggerActionManager.RegisterAction("NAT_NIV_ClearCreatures", new TriggerActionDelegate(NatureInTheValleyEntry.ActionClearCreatures));
 			TriggerActionManager.RegisterAction("NAT_NIV_InstantiateSpecificCreature", new TriggerActionDelegate(NatureInTheValleyEntry.ActionSpawnSpecific));
+			TriggerActionManager.RegisterTrigger("NAT_NIV_Spawned");
 			if (api == null)
 			{
 				return;
@@ -864,7 +923,7 @@ namespace NatureInTheValley
 			}, () => this.helper.Translation.Get("MenuingKey"), () => this.helper.Translation.Get("MenuingKeyInfo"), null);
 		}
 
-		// Token: 0x06000019 RID: 25 RVA: 0x00005990 File Offset: 0x00003B90
+		// Token: 0x06000019 RID: 25 RVA: 0x00005E78 File Offset: 0x00004078
 		public static void TryCatch(Farmer farmer)
 		{
 			Vector2 value = default(Vector2);
@@ -915,7 +974,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x0600001A RID: 26 RVA: 0x00005D60 File Offset: 0x00003F60
+		// Token: 0x0600001A RID: 26 RVA: 0x00006248 File Offset: 0x00004448
 		private void OnAssetRequested(object sender, AssetRequestedEventArgs e)
 		{
 			if (e.NameWithoutLocale.IsEquivalentTo("Mods/NatureInTheValley/Icon", false))
@@ -925,6 +984,14 @@ namespace NatureInTheValley
 			if (e.NameWithoutLocale.IsEquivalentTo("Mods/NatureInTheValley/TerrariumItem", false))
 			{
 				e.LoadFromModFile<Texture2D>("PNGs/TerrariumItem.png", AssetLoadPriority.Low);
+			}
+			if (e.NameWithoutLocale.IsEquivalentTo("Nature.NITV/Creatures", false))
+			{
+				e.LoadFrom(() => new Dictionary<string, CreatureModel>(), AssetLoadPriority.Exclusive, null);
+			}
+			if (e.NameWithoutLocale.IsEquivalentTo("Nature.NITV/Rewards", false))
+			{
+				e.LoadFrom(() => new Dictionary<string, RewardModel>(), AssetLoadPriority.Exclusive, null);
 			}
 			if (e.NameWithoutLocale.IsEquivalentTo("Data/Objects", false))
 			{
@@ -1000,11 +1067,11 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x0600001B RID: 27 RVA: 0x00005E04 File Offset: 0x00004004
+		// Token: 0x0600001B RID: 27 RVA: 0x00006368 File Offset: 0x00004568
 		public void MenuChanged(object sender, MenuChangedEventArgs e)
 		{
 			IClickableMenu newMenu = e.NewMenu;
-			if (!(newMenu is ShopMenu) || ((newMenu as ShopMenu).ShopId != "SeedShop" && (newMenu as ShopMenu).ShopId != "Joja"))
+			if (!(newMenu is ShopMenu) || ((newMenu as ShopMenu).ShopId != "SeedShop" && (newMenu as ShopMenu).ShopId != "Joja") || (newMenu as ShopMenu).forSale.Contains(new NatInValeyNet()))
 			{
 				return;
 			}
@@ -1023,7 +1090,7 @@ namespace NatureInTheValley
 			return true;
 		}
 
-		// Token: 0x0600001D RID: 29 RVA: 0x00005EB0 File Offset: 0x000040B0
+		// Token: 0x0600001D RID: 29 RVA: 0x0000642C File Offset: 0x0000462C
 		public bool OpenDonationWindow(GameLocation location, string[] args, Farmer player, Point point)
 		{
 			location.createQuestionDialogue(this.helper.Translation.Get("InsectariumDesk"), new Response[]
@@ -1037,7 +1104,7 @@ namespace NatureInTheValley
 			return true;
 		}
 
-		// Token: 0x0600001E RID: 30 RVA: 0x00005FAC File Offset: 0x000041AC
+		// Token: 0x0600001E RID: 30 RVA: 0x00006528 File Offset: 0x00004728
 		public void setUpInsectarium(GameLocation location)
 		{
 			int num = 0;
@@ -1279,7 +1346,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x0600001F RID: 31 RVA: 0x00006FF4 File Offset: 0x000051F4
+		// Token: 0x0600001F RID: 31 RVA: 0x00007570 File Offset: 0x00005770
 		public void CommandTwo(string common, string[] args)
 		{
 			GameLocation locationFromName = Game1.getLocationFromName("NIVInnerInsec");
@@ -1289,7 +1356,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000020 RID: 32 RVA: 0x0000706C File Offset: 0x0000526C
+		// Token: 0x06000020 RID: 32 RVA: 0x000075E8 File Offset: 0x000057E8
 		public void CommandThree(string common, string[] args)
 		{
 			GameLocation locationFromName = Game1.getLocationFromName("NIVInnerInsec");
@@ -1305,7 +1372,7 @@ namespace NatureInTheValley
 			return Game1.player.couldInventoryAcceptThisItem(item);
 		}
 
-		// Token: 0x06000022 RID: 34 RVA: 0x000070E0 File Offset: 0x000052E0
+		// Token: 0x06000022 RID: 34 RVA: 0x0000765C File Offset: 0x0000585C
 		public static List<Item> getRewardsForPlayer(Farmer who)
 		{
 			List<Item> list = new List<Item>();
@@ -1435,7 +1502,7 @@ namespace NatureInTheValley
 			who.mailReceived.Add("InsecReward." + item.QualifiedItemId);
 		}
 
-		// Token: 0x06000024 RID: 36 RVA: 0x00007518 File Offset: 0x00005718
+		// Token: 0x06000024 RID: 36 RVA: 0x00007A94 File Offset: 0x00005C94
 		public void DayStarted(object sender, DayStartedEventArgs eventArgs)
 		{
 			NatureInTheValleyEntry.creatures.Clear();
@@ -1477,7 +1544,7 @@ namespace NatureInTheValley
 			return Math.Max((double)x / 4000.0, 1.0);
 		}
 
-		// Token: 0x06000026 RID: 38 RVA: 0x0000773C File Offset: 0x0000593C
+		// Token: 0x06000026 RID: 38 RVA: 0x00007CB8 File Offset: 0x00005EB8
 		private void OnModMessagereceived(object sender, ModMessageReceivedEventArgs eventArgs)
 		{
 			if (eventArgs.FromModID == "Nature.NatureInTheValley" && !Context.IsSplitScreen)
@@ -1493,12 +1560,16 @@ namespace NatureInTheValley
 					Tuple<string, int, int, string> tuple = eventArgs.ReadAs<Tuple<string, int, int, string>>();
 					List<string> list = this.creatureData[tuple.Item1];
 					NatureInTheValleyEntry.creatures.Add(new NatCreature(new Vector2((float)tuple.Item2, (float)tuple.Item3) * 64f, Game1.getLocationFromName(tuple.Item4), tuple.Item1, int.Parse(list[0]), list[1] == "true", float.Parse(list[2]), int.Parse(list[3]), float.Parse(list[4]), list[5] == "true", list[6] == "true", int.Parse(list[7]), list[8] == "true", new List<string>(list[9].Split(',', StringSplitOptions.None)), int.Parse(list[10]), new List<string>(list[11].Split(',', StringSplitOptions.None)), int.Parse(list[12]), int.Parse(list[13]), int.Parse(list[14]), list[15], int.Parse(list[16]), int.Parse(list[17]), int.Parse(list[18]), tuple.Item4 == "NIVInnerInsec", (list.Count > 26) ? int.Parse(list[26]) : 32, (list.Count > 27) ? int.Parse(list[27]) : 32, list[list.Count - 1] == "true"));
+					TriggerActionManager.Raise("NAT_NIV_Spawned", new object[]
+					{
+						tuple.Item1
+					}, Game1.getLocationFromName(tuple.Item4), null, null, null);
 					return;
 				}
 			}
 		}
 
-		// Token: 0x06000027 RID: 39 RVA: 0x0000795C File Offset: 0x00005B5C
+		// Token: 0x06000027 RID: 39 RVA: 0x00007EFC File Offset: 0x000060FC
 		public void CommandFour(string common, string[] args)
 		{
 			foreach (NatCreature natCreature in NatureInTheValleyEntry.creatures)
@@ -1508,7 +1579,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000028 RID: 40 RVA: 0x000079D8 File Offset: 0x00005BD8
+		// Token: 0x06000028 RID: 40 RVA: 0x00007F78 File Offset: 0x00006178
 		public void OneSecond(object sender, OneSecondUpdateTickedEventArgs e)
 		{
 			if (Game1.currentLocation == null || Game1.currentLocation.Name == "NIVInnerInsec" || !Game1.shouldTimePass(false))
@@ -1521,7 +1592,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000029 RID: 41 RVA: 0x00007A3C File Offset: 0x00005C3C
+		// Token: 0x06000029 RID: 41 RVA: 0x00007FDC File Offset: 0x000061DC
 		public void RemovedLargeTerrain(object sender, LargeTerrainFeatureListChangedEventArgs e)
 		{
 			if (e.Removed == null || !(e.Removed is Bush) || !e.IsCurrentLocation)
@@ -1557,7 +1628,7 @@ namespace NatureInTheValley
 			return NatureInTheValleyEntry.creatures.Count;
 		}
 
-		// Token: 0x0600002B RID: 43 RVA: 0x00007B4C File Offset: 0x00005D4C
+		// Token: 0x0600002B RID: 43 RVA: 0x000080EC File Offset: 0x000062EC
 		public int CreaturesInLocationR(GameLocation l)
 		{
 			int num = 0;
@@ -1574,7 +1645,7 @@ namespace NatureInTheValley
 			return num;
 		}
 
-		// Token: 0x0600002C RID: 44 RVA: 0x00007BB4 File Offset: 0x00005DB4
+		// Token: 0x0600002C RID: 44 RVA: 0x00008154 File Offset: 0x00006354
 		public static bool CoverCheckAction(BusStop __instance, Location tileLocation, xTile.Dimensions.Rectangle viewport, Farmer who, out bool __result)
 		{
 			if ((!NatureInTheValleyEntry.staticHelper.ModRegistry.IsLoaded("hootless.BusLocations") || !NatureInTheValleyEntry.staticHelper.ModRegistry.IsLoaded("Nature.NIVBL")) && tileLocation.X == 28 && tileLocation.Y == 11)
@@ -1596,7 +1667,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x0600002E RID: 46 RVA: 0x00007C1C File Offset: 0x00005E1C
+		// Token: 0x0600002E RID: 46 RVA: 0x000081BC File Offset: 0x000063BC
 		public static void TreeFell(Tree __instance, Tool t, int explosion, Vector2 tileLocation)
 		{
 			for (int i = 0; i < NatureInTheValleyEntry.creatures.Count; i++)
@@ -1609,7 +1680,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x0600002F RID: 47 RVA: 0x00007C90 File Offset: 0x00005E90
+		// Token: 0x0600002F RID: 47 RVA: 0x00008230 File Offset: 0x00006430
 		public static void NPC_checkAction(NPC __instance)
 		{
 			if (__instance.Name == "Jade" && Game1.player.getFriendshipLevelForNPC("Jade") >= 2250 && !Game1.player.hasOrWillReceiveMail("NIVJadeNet") && Game1.player.couldInventoryAcceptThisItem(new NatInValeyJadeNet()))
@@ -1620,7 +1691,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000030 RID: 48 RVA: 0x00007D48 File Offset: 0x00005F48
+		// Token: 0x06000030 RID: 48 RVA: 0x000082E8 File Offset: 0x000064E8
 		public bool validLocation(GameLocation location, string code)
 		{
 			if (code == "1")
@@ -1659,7 +1730,7 @@ namespace NatureInTheValley
 			return location.Name == code;
 		}
 
-		// Token: 0x06000031 RID: 49 RVA: 0x00007F80 File Offset: 0x00006180
+		// Token: 0x06000031 RID: 49 RVA: 0x00008520 File Offset: 0x00006720
 		private void renderPostWorld(object sender, RenderedWorldEventArgs eventArgs)
 		{
 			if (NatureInTheValleyEntry.sparklingText.Value != null)
@@ -1674,7 +1745,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000032 RID: 50 RVA: 0x00008000 File Offset: 0x00006200
+		// Token: 0x06000032 RID: 50 RVA: 0x000085A0 File Offset: 0x000067A0
 		public static bool DonatedTotalGSQ(string[] query, GameStateQueryContext context)
 		{
 			int num = 0;
@@ -1692,21 +1763,21 @@ namespace NatureInTheValley
 			return float.Parse(query[1]) <= (float)(num / num2);
 		}
 
-		// Token: 0x06000033 RID: 51 RVA: 0x00008094 File Offset: 0x00006294
+		// Token: 0x06000033 RID: 51 RVA: 0x00008634 File Offset: 0x00006834
 		public static bool DonatedSpecificGSQ(string[] query, GameStateQueryContext context)
 		{
 			string text;
 			return Game1.getLocationFromName("NIVInnerInsec").modData.TryGetValue("NatureInTheValley/Donated/" + query[1], out text);
 		}
 
-		// Token: 0x06000034 RID: 52 RVA: 0x000080C4 File Offset: 0x000062C4
+		// Token: 0x06000034 RID: 52 RVA: 0x00008664 File Offset: 0x00006864
 		public static bool CaughtSpecificGSQ(string[] query, GameStateQueryContext context)
 		{
 			string text;
 			return Game1.player.modData.TryGetValue("NIVCaught" + query[1], out text);
 		}
 
-		// Token: 0x06000035 RID: 53 RVA: 0x000080F0 File Offset: 0x000062F0
+		// Token: 0x06000035 RID: 53 RVA: 0x00008690 File Offset: 0x00006890
 		public static bool SpawnedSpecificGSQ(string[] query, GameStateQueryContext context)
 		{
 			using (List<NatCreature>.Enumerator enumerator = NatureInTheValleyEntry.creatures.GetEnumerator())
@@ -1722,7 +1793,7 @@ namespace NatureInTheValley
 			return false;
 		}
 
-		// Token: 0x06000036 RID: 54 RVA: 0x00008150 File Offset: 0x00006350
+		// Token: 0x06000036 RID: 54 RVA: 0x000086F0 File Offset: 0x000068F0
 		public static bool ActionClearCreatures(string[] args, TriggerActionContext context, out string error)
 		{
 			string text;
@@ -1738,7 +1809,7 @@ namespace NatureInTheValley
 			return true;
 		}
 
-		// Token: 0x06000037 RID: 55 RVA: 0x0000819C File Offset: 0x0000639C
+		// Token: 0x06000037 RID: 55 RVA: 0x0000873C File Offset: 0x0000693C
 		public static bool ActionSpawnSpecific(string[] args, TriggerActionContext context, out string error)
 		{
 			string text;
@@ -1757,10 +1828,14 @@ namespace NatureInTheValley
 			{
 				"Nature.NatureInTheValley"
 			}, null);
+			TriggerActionManager.Raise("NAT_NIV_Spawned", new object[]
+			{
+				args[1]
+			}, null, null, null, null);
 			return true;
 		}
 
-		// Token: 0x06000038 RID: 56 RVA: 0x000083CC File Offset: 0x000065CC
+		// Token: 0x06000038 RID: 56 RVA: 0x00008984 File Offset: 0x00006B84
 		public void CommandFive(string common, string[] args)
 		{
 			foreach (KeyValuePair<string, List<string>> keyValuePair in this.locationalData)
@@ -1769,7 +1844,7 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000039 RID: 57 RVA: 0x0000842C File Offset: 0x0000662C
+		// Token: 0x06000039 RID: 57 RVA: 0x000089E4 File Offset: 0x00006BE4
 		public string HandleRarityChance(Dictionary<string, List<string>> data)
 		{
 			if (data.Count == 0)
@@ -1815,13 +1890,13 @@ namespace NatureInTheValley
 			return "";
 		}
 
-		// Token: 0x0600003A RID: 58 RVA: 0x00008514 File Offset: 0x00006714
+		// Token: 0x0600003A RID: 58 RVA: 0x00008ACC File Offset: 0x00006CCC
 		private Vector2 ValidPosition(GameLocation l)
 		{
 			for (int i = 0; i < 10; i++)
 			{
 				Vector2 vector = new Vector2((float)Game1.random.Next(this.locbacklayer.TileWidth), (float)Game1.random.Next(this.locbacklayer.TileHeight));
-				if (l.CanSpawnCharacterHere(vector))
+				if (l.CanSpawnCharacterHere(vector) && Vector2.Distance(Game1.player.Tile, vector) > 5f)
 				{
 					return vector;
 				}
@@ -1829,7 +1904,7 @@ namespace NatureInTheValley
 			return Vector2.Zero;
 		}
 
-		// Token: 0x0600003B RID: 59 RVA: 0x00008574 File Offset: 0x00006774
+		// Token: 0x0600003B RID: 59 RVA: 0x00008B40 File Offset: 0x00006D40
 		public void TrySpawnFromArea(GameLocation location)
 		{
 			string text = this.HandleRarityChance(this.locationalData);
@@ -1871,6 +1946,17 @@ namespace NatureInTheValley
 					return;
 				}
 				this.Instantiate(text, vector2, location);
+				if (this.locationalData[text].Count > 29 && this.locationalData[text][29] != "true" && this.locationalData[text][29] != "false")
+				{
+					for (int j = 0; j < int.Parse(this.locationalData[text][29]) - 1; j++)
+					{
+						Vector2 vector3 = vector2 + new Vector2((float)Game1.random.Next(-2, 2), (float)Game1.random.Next(-2, 2));
+						if (this.isValidPosition(location, vector3))
+						{
+							this.Instantiate(text, vector3, location);
+						}
+					}
+				}
 				return;
 			}
 			else if (a == "2")
@@ -1880,12 +1966,23 @@ namespace NatureInTheValley
 				{
 					return;
 				}
-				Vector2 vector3 = list2[Game1.random.Next(list2.Count - 1)];
-				if (this.CheckForBugAtTile(location, vector3 * 64f, 64f))
+				Vector2 vector4 = list2[Game1.random.Next(list2.Count - 1)];
+				if (this.CheckForBugAtTile(location, vector4 * 64f, 64f))
 				{
 					return;
 				}
-				this.Instantiate(text, vector3, location);
+				this.Instantiate(text, vector4, location);
+				if (this.locationalData[text].Count > 29 && this.locationalData[text][29] != "true" && this.locationalData[text][29] != "false")
+				{
+					for (int k = 0; k < int.Parse(this.locationalData[text][29]) - 1; k++)
+					{
+						Vector2 vector5 = vector4 + new Vector2((float)Game1.random.Next(-2, 2), (float)Game1.random.Next(-2, 2));
+						if (this.isValidPosition(location, vector5))
+						{
+							this.Instantiate(text, vector5, location);
+						}
+					}
+				}
 				return;
 			}
 			else
@@ -1899,12 +1996,23 @@ namespace NatureInTheValley
 						{
 							return;
 						}
-						Vector2 vector4 = list3[Game1.random.Next(list3.Count - 1)];
-						if (this.CheckForBugAtTile(location, vector4 * 64f, 64f))
+						Vector2 vector6 = list3[Game1.random.Next(list3.Count - 1)];
+						if (this.CheckForBugAtTile(location, vector6 * 64f, 64f))
 						{
 							return;
 						}
-						this.Instantiate(text, vector4, location);
+						this.Instantiate(text, vector6, location);
+						if (this.locationalData[text].Count > 29 && this.locationalData[text][29] != "true" && this.locationalData[text][29] != "false")
+						{
+							for (int l = 0; l < int.Parse(this.locationalData[text][29]) - 1; l++)
+							{
+								Vector2 vector7 = vector6 + new Vector2((float)Game1.random.Next(-2, 2), (float)Game1.random.Next(-2, 2));
+								if (this.isValidPosition(location, vector7))
+								{
+									this.Instantiate(text, vector7, location);
+								}
+							}
+						}
 					}
 					return;
 				}
@@ -1913,8 +2021,19 @@ namespace NatureInTheValley
 				{
 					return;
 				}
-				Vector2 tile = list4[Game1.random.Next(list4.Count - 1)];
-				this.Instantiate(text, tile, location);
+				Vector2 vector8 = list4[Game1.random.Next(list4.Count - 1)];
+				this.Instantiate(text, vector8, location);
+				if (this.locationalData[text].Count > 29 && this.locationalData[text][29] != "true" && this.locationalData[text][29] != "false")
+				{
+					for (int m = 0; m < int.Parse(this.locationalData[text][29]) - 1; m++)
+					{
+						Vector2 vector9 = vector8 + new Vector2((float)Game1.random.Next(-2, 2), (float)Game1.random.Next(-2, 2));
+						if (this.isValidPosition(location, vector9))
+						{
+							this.Instantiate(text, vector9, location);
+						}
+					}
+				}
 				return;
 			}
 		}
@@ -1937,7 +2056,7 @@ namespace NatureInTheValley
 			return this.helper.Translation.Get("DecoratorDesc");
 		}
 
-		// Token: 0x0600003F RID: 63 RVA: 0x00008890 File Offset: 0x00006A90
+		// Token: 0x0600003F RID: 63 RVA: 0x0000916C File Offset: 0x0000736C
 		public Texture2D Decorate(Item input)
 		{
 			if (input.Category != -81 || !input.ItemId.Contains("NatInValley.Creature."))
@@ -1950,6 +2069,76 @@ namespace NatureInTheValley
 				return this.helper.ModContent.Load<Texture2D>("PNGs/Icon.png");
 			}
 			return null;
+		}
+
+		// Token: 0x06000063 RID: 99 RVA: 0x000091D8 File Offset: 0x000073D8
+		public void OnAssetsInvalidated(object sender, AssetsInvalidatedEventArgs e)
+		{
+			using (IEnumerator<IAssetName> enumerator = e.NamesWithoutLocale.GetEnumerator())
+			{
+				while (enumerator.MoveNext())
+				{
+					if (enumerator.Current.IsEquivalentTo("Nature.NITV/Creatures", false))
+					{
+						foreach (KeyValuePair<string, CreatureModel> keyValuePair in Game1.content.Load<Dictionary<string, CreatureModel>>("Nature.NITV/Creatures"))
+						{
+							List<string> value = new List<string>
+							{
+								keyValuePair.Value.rarity.ToString(),
+								keyValuePair.Value.grounded.ToString().ToLower(),
+								keyValuePair.Value.speed.ToString(),
+								keyValuePair.Value.pauseTime.ToString(),
+								keyValuePair.Value.scale.ToString(),
+								keyValuePair.Value.doesRun.ToString().ToLower(),
+								keyValuePair.Value.isMover.ToString().ToLower(),
+								keyValuePair.Value.range.ToString(),
+								keyValuePair.Value.dangerous.ToString().ToLower(),
+								keyValuePair.Value.seasons.Join(null, ","),
+								keyValuePair.Value.weatherCode,
+								keyValuePair.Value.locations.Join(null, ","),
+								keyValuePair.Value.minTime.ToString(),
+								keyValuePair.Value.maxTime.ToString(),
+								keyValuePair.Value.frames.ToString(),
+								keyValuePair.Value.spritePath,
+								keyValuePair.Value.xShadow.ToString(),
+								keyValuePair.Value.localSpawnCode,
+								keyValuePair.Value.yShadow.ToString(),
+								keyValuePair.Value.price.ToString(),
+								keyValuePair.Value.spriteIndex.ToString(),
+								keyValuePair.Value.xDef.ToString(),
+								keyValuePair.Value.yDef.ToString(),
+								keyValuePair.Value.itemTexture.ToString(),
+								keyValuePair.Value.displayName,
+								keyValuePair.Value.displayDescription,
+								keyValuePair.Value.xSpriteSize.ToString(),
+								keyValuePair.Value.ySpriteSize.ToString(),
+								keyValuePair.Value.GSQ,
+								keyValuePair.Value.packSize.ToString(),
+								keyValuePair.Value.compelxAnims.ToString().ToLower()
+							};
+							if (this.creatureData.ContainsKey(keyValuePair.Key))
+							{
+								this.creatureData.Remove(keyValuePair.Key);
+							}
+							this.creatureData.Add(keyValuePair.Key, value);
+						}
+						NatureInTheValleyEntry.staticCreatureData = this.creatureData;
+						this.helper.GameContent.InvalidateCache("Data/Furniture");
+						this.helper.GameContent.InvalidateCache("Data/Objects");
+					}
+					if (enumerator.Current.IsEquivalentTo("Nature.NITV/Rewards", false))
+					{
+						foreach (KeyValuePair<string, RewardModel> keyValuePair2 in Game1.content.Load<Dictionary<string, RewardModel>>("Nature.NITV/Rewards"))
+						{
+							if (NatureInTheValleyEntry.customRewards.ContainsKey(keyValuePair2.Key))
+							{
+								NatureInTheValleyEntry.customRewards.Remove(keyValuePair2.Key);
+							}
+							NatureInTheValleyEntry.customRewards.Add(keyValuePair2.Key, keyValuePair2.Value);
+						}
+					}
+				}
+			}
 		}
 
 		// Token: 0x04000001 RID: 1

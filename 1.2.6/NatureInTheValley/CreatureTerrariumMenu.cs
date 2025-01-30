@@ -10,7 +10,7 @@ namespace NatureInTheValley
 	// Token: 0x02000016 RID: 22
 	public class CreatureTerrariumMenu : InventoryMenu
 	{
-		// Token: 0x0600010E RID: 270 RVA: 0x0000D51C File Offset: 0x0000B71C
+		// Token: 0x06000111 RID: 273 RVA: 0x0000E288 File Offset: 0x0000C488
 		public CreatureTerrariumMenu() : base(Game1.viewport.Width / 2 - 384, Game1.viewport.Height / 2, false, null, new InventoryMenu.highlightThisItem(CreatureTerrariumMenu.CheckDonated), Game1.player.Items.Count, Math.Max(1, Game1.player.Items.Count / 12), 0, 0, true)
 		{
 			base.initializeUpperRightCloseButton();
@@ -23,7 +23,7 @@ namespace NatureInTheValley
 			base.initializeUpperRightCloseButton();
 		}
 
-		// Token: 0x0600010F RID: 271 RVA: 0x000028F0 File Offset: 0x00000AF0
+		// Token: 0x06000112 RID: 274 RVA: 0x000028FE File Offset: 0x00000AFE
 		public static void ExitFunction(int d)
 		{
 			if (d == 0)
@@ -33,14 +33,14 @@ namespace NatureInTheValley
 			}
 		}
 
-		// Token: 0x06000110 RID: 272 RVA: 0x0000D5CC File Offset: 0x0000B7CC
+		// Token: 0x06000113 RID: 275 RVA: 0x0000E338 File Offset: 0x0000C538
 		public static bool CheckDonated(Item item)
 		{
 			string text;
 			return item.Category == -81 && item.ItemId.Contains("NatInValley.Creature.") && Game1.currentLocation.modData.TryGetValue("NatureInTheValley/Donated/" + item.ItemId.Split("NatInValley.Creature.", StringSplitOptions.None)[1], out text);
 		}
 
-		// Token: 0x06000111 RID: 273 RVA: 0x0000D628 File Offset: 0x0000B828
+		// Token: 0x06000114 RID: 276 RVA: 0x0000E394 File Offset: 0x0000C594
 		public override void receiveLeftClick(int x, int y, bool playSound = true)
 		{
 			Item itemAt = base.getItemAt(x, y);
@@ -65,7 +65,7 @@ namespace NatureInTheValley
 			Game1.player.addItemToInventory(new Terrarium("Tera." + itemAt.ItemId, Vector2.Zero));
 		}
 
-		// Token: 0x06000112 RID: 274 RVA: 0x0000D6DC File Offset: 0x0000B8DC
+		// Token: 0x06000115 RID: 277 RVA: 0x0000E448 File Offset: 0x0000C648
 		public override void draw(SpriteBatch b)
 		{
 			if (Game1.options.showMenuBackground)
@@ -82,10 +82,10 @@ namespace NatureInTheValley
 			base.drawMouse(b, false, -1);
 		}
 
-		// Token: 0x04000092 RID: 146
+		// Token: 0x04000094 RID: 148
 		private int DonationCompletionType;
 
-		// Token: 0x04000093 RID: 147
+		// Token: 0x04000095 RID: 149
 		private string title;
 	}
 }

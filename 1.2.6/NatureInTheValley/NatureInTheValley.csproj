@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{656B83A8-40A7-4B22-914B-C66250977F41}</ProjectGuid>
+    <ProjectGuid>{2F18FDCE-2B9A-42FC-96D7-B3465CA1B637}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NatureInTheValley</RootNamespace>
