@@ -1,7 +1,7 @@
 {
     "Name": "NatureInValleyContent",
     "Author": "Nature",
-    "Version": "1.2.5",
+    "Version": "1.2.6",
     "Description": "Adds content for Nature In The Valley Mod",
     "UniqueID": "Nature.NatureInValleyContent",
     "UpdateKeys": ["Nexus:30138"],
