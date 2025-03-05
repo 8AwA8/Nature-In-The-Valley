@@ -1,0 +1,12 @@
+{
+   "Name": "[BL] Nature In The Valley",
+   "Author": "Nature",
+   "Version": "1.2.7",
+   "Description": "Content Pack for adding the outer insec area to bus locations.",
+   "UniqueID": "Nature.NIVBL",
+   "MinimumApiVersion": "2.0",
+   "UpdateKeys": [""],
+   "ContentPackFor": {
+      "UniqueID": "hootless.BusLocations",
+   }
+}

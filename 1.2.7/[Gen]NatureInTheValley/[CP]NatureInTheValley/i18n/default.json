@@ -1,0 +1,23 @@
+{
+  "IvyInsectarium.Name": "Ivy",
+  "IvyInsectarium.Mon": "Every season brings with it a unique span of flora.#$b# Year round, I could be entertained but what I found in the bushes.",
+  "IvyInsectarium.Tue": "I don't know what happened to the valley, for all these creatures to stir up.#$b#Maybe fate is just on the side of fanatics like me.",
+  "IvyInsectarium.Wed": "How I wish my legs and reflexes could move like they used to.",
+  "IvyInsectarium.Thu": "Have you brought me anything new today?#$b#Someday I know this place will be more filled than ever!",
+  "IvyInsectarium.Fri": "Yesterday I tried catching a stag beetle...#$b#Somehow I ended up with the net on top of my own head!",
+  "IvyInsectarium.Sat": "Different locations and weathers could have different varieties of creature.#$b#So keep an eye out even in the rain!",
+  "IvyInsectarium.Sun": "Legends say there exists an almost magically sweet bug deep in the forest.#$b# I'm not sure what could be sweet about a bug, but I'm still curious!",
+"NIVHat": "Surveyer's Hat",
+"NIVHatD": "A simple hat made to protect the wearer from the sting of the sun and bugs",
+"NIVShirt": "Surveyer's Shirt",
+"NIVShirtD": "A uniform made with practically in mind, bearing the logo of the insectarium.",
+"Donate": "{0} Donated {1}",
+"QuestTitle": "Bug Hunt",
+"QuestDesc": "Jade is wanting to research a specific creature",
+"QuestResponse": "Thanks for rounding these up for me!",
+"Quest1Clear": "bring Jade 2 Garden Snails",
+"Quest2Clear": "bring Jade 2 Crickets",
+"Quest3Clear": "bring Jade 2 Bark Beetles",
+"Quest4Clear": "bring Jade 2 Sand Fleas",
+"NameDisplayInsec": "Insectarium"
+}

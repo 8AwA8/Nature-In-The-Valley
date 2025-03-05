@@ -1,0 +1,23 @@
+{
+  "IvyInsectarium.Name": "艾薇",
+  "IvyInsectarium.Mon": "每个季节都有独特的植物种类。#$b#一年四季，我都能在灌木丛中找到乐趣。",
+  "IvyInsectarium.Tue": "我不知道山谷里发生了什么事，让这些生物蠢蠢欲动。#$b#也许命运就是站在像我这样的狂热者一边。",
+  "IvyInsectarium.Wed": "我多么希望我的双腿和反应能力能像以前一样灵敏。",
+  "IvyInsectarium.Thu": "你今天给我带新东西了吗？#$b#我知道，总有一天，这里会比以往更热闹！",
+  "IvyInsectarium.Fri": "昨天我试着抓一只锹形虫……#$b#不知怎么的，网就跑到我头顶上去了！",
+  "IvyInsectarium.Sat": "不同的地点和天气会有不同种类的生物。#$b#所以即便是雨天，也要留心观察！",
+  "IvyInsectarium.Sun": "传说森林深处有一种近乎奇迹般的甜味虫子。#$b#我不知道虫子有什么可甜的，但我还是很好奇！",
+  "NIVHat": "调查员的帽子",
+  "NIVHatD": "一顶简单的帽子，用于保护佩戴者免受阳光和虫子带来的刺痛。",
+  "NIVShirt": "调查员的衬衫",
+  "NIVShirtD": "根据实际情况制作的带有昆虫馆标志的制服。",
+"Donate": "{0} 捐赠 {1}",
+"QuestTitle": "昆虫猎捕",  
+"QuestDesc": "玉想研究一种特定的生物",  
+"QuestResponse": "谢谢你帮我把这些收集起来！",  
+"Quest1Clear": "给玉带来2只花园蜗牛",  
+"Quest2Clear": "给玉带来2只蟋蟀",  
+"Quest3Clear": "给玉带来2只树皮甲虫",  
+"Quest4Clear": "给玉带来2只沙跳蚤",
+"NameDisplayInsec": "Insectarium"
+}

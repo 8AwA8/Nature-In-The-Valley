@@ -1,0 +1,23 @@
+{
+  "IvyInsectarium.Name": "Ivy",
+  "IvyInsectarium.Mon": "Chaque saison apporte avec elle une flore unique.#$b#Toute l'année, je pourrais me divertir avec ce que je trouvais dans les buissons.",
+  "IvyInsectarium.Tue": "Je ne sais pas ce qui est arrivé à la vallée, pour que toutes ces créatures s'agitent.#$b#Peut-être que le destin est du côté des fanatiques comme moi.",
+  "IvyInsectarium.Wed": "Comme j’aimerais que mes jambes et mes réflexes puissent bouger comme avant.",
+  "IvyInsectarium.Thu": "M'as-tu apporté quelque chose de nouveau aujourd'hui ?#$b#Un jour, je sais que cet endroit sera plus rempli que jamais !",
+  "IvyInsectarium.Fri": "Hier, j'ai essayé d'attraper un lucane...#$b#Je ne sais pas comment je m’y suis prise mais je me suis retrouvé avec le filet au-dessus de ma tête !",
+  "IvyInsectarium.Sat": "Différents endroits et conditions météorologiques peuvent avoir différentes variétés de créatures.#$b#Alors gardez l’œil ouvert même sous la pluie !",
+  "IvyInsectarium.Sun": "Les légendes disent qu'il existe un insecte presque magique au fond de la forêt.#$b#Je ne sais pas comment un insecte pourrait être magique mais je suis quand même curieuse !",
+  "NIVHat": "Chapeau d'arpenteur",
+  "NIVHatD": "Un chapeau simple conçu pour protéger celui qui le porte des piqûres du soleil et des insectes.",
+  "NIVShirt": "Chemise d'arpenteur",
+  "NIVShirtD": "Un uniforme réalisé dans un esprit pratique, portant le logo de l'insectarium.",
+"Donate": "{0} a Donné une {1}",
+"QuestTitle": "Chasse aux Insectes",  
+"QuestDesc": "Jade veut étudier une créature spécifique",  
+"QuestResponse": "Merci de les avoir réunis pour moi !",  
+"Quest1Clear": "apporte à Jade 2 Escargots de Jardin",  
+"Quest2Clear": "apporte à Jade 2 Grillons",  
+"Quest3Clear": "apporte à Jade 2 Coléoptères d'Écorce",  
+"Quest4Clear": "apporte à Jade 2 Puces de Sable",
+"NameDisplayInsec": "Insectarium"
+}

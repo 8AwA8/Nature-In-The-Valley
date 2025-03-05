@@ -1,0 +1,1759 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="17" nextobjectid="334">
+ <properties>
+  <property name="BrookSounds" value="24 24 0"/>
+  <property name="DefaultWarpLocation" value="24 39"/>
+  <property name="Fall_Objects" value="T"/>
+  <property name="Light" value="22 12 1 26 12 1 19 36 6 25 9 2 23 9 2 21 11 6 27 11 6"/>
+  <property name="LocationContext" value="Default"/>
+  <property name="Outdoors" value="T"/>
+  <property name="Spring_Objects" value="T"/>
+  <property name="Summer_Objects" value="T"/>
+  <property name="TreatAsOutdoors" value="T"/>
+  <property name="Trees" value="12 37 0 6 29 1 7 18 2 31 15 0 29 29 2 18 29 2"/>
+  <property name="Winter_Objects" value="T"/>
+  <property name="skipWeedGrowth" value="T"/>
+ </properties>
+ <tileset firstgid="1" name="spring_town" tilewidth="16" tileheight="16" tilecount="2304" columns="32">
+  <image source="spring_town.png" width="512" height="1152"/>
+ </tileset>
+ <tileset firstgid="2305" name="spring_outdoorsTileSheet" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
+ </tileset>
+ <tileset firstgid="4280" name="spring_outdoorsTileSheet" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
+ </tileset>
+ <tileset firstgid="6255" name="spring_outdoorsTileSheet" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
+ </tileset>
+ <tileset firstgid="8230" name="InsectariumHouse" tilewidth="16" tileheight="16" tilecount="255" columns="17">
+  <image source="InsectariumHouse.png" width="280" height="250"/>
+ </tileset>
+ <tileset firstgid="8485" name="spring_outdoorsTileSheet" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
+ </tileset>
+ <tileset firstgid="10460" name="spring_outdoorsTileSheet" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
+ </tileset>
+ <tileset firstgid="12435" name="paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
+  <image source="paths.png" width="64" height="256"/>
+ </tileset>
+ <tileset firstgid="12499" name="spring_outdoorsTileSheet" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <image source="spring_outdoorsTileSheet.png" width="400" height="1264"/>
+ </tileset>
+ <layer id="1" name="Back-1" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt1MEJwCAQRFHPVhPrsxVbSFvWYQsJCOviezD3f5pSAAAAAABgj/eJLvhmJOkEgL96jS7Ib7b8A+4Q/TW+ilMtw8pr5g==
+  </data>
+ </layer>
+ <objectgroup id="2" name="Back-1"/>
+ <layer id="3" name="Back" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztmLtOwzAUQD10oF0YeXwEAtOSwsSORHnsqBvlsQJjy46ATwAmYGYBNljLAnxAF7pA4QtQuVGL5LqO7fiVxOqVjlQnub4+cdrGRmgUZLTn5Eh7yHqk2SWOQ5p9WGM8LiPUKSL0DfwUe+20u/jgEfXMyHqkwWUKDzON+R6TjJykA+Nh5gUec4ycNI1fxyMJH55DljwW8CCBpkcJD/dpKyo4mjVNj1VO3xUDTry+XXq4YuQx8nDp0aA8Ghn1qFMedcseNqMcILQILAV269iOdRj/BrDpwOOlZI9dGP8esB/YrSNLk/h8J5kTXkfOR3jsVyJHZXwyeRfAJXAl4RhnPsLaB8AhcCSo2yzJjzfK8R54AB777bZkfpsxHzSnwBlwzuibriuqJbrmFXgD3vvtrmQfXWo+PiLyroEb4Jbqm64rqiVy/AS+gI5CH7z5IPOegGei3Yyoy6sVhUoOjcvfK9ZegQ4q+wwmoNdicbGxHlQhqffdHM7Ge2KW39tznnj4Mh9JetQ02cGD31sZj/9rQ7YNjKFG3RsT6OwnqpCLeVz2vKoHr19RTZJqYRDV+zNRQFWeB5xvmX4GQlb60B46zBbY+yUzBmvQnIyjZR9AeVik5zUW+HlD6IYnHq2xHrr5umiHJ/Phi8dWoIeNUB2HjXWma8iw8T/rClaYWC+75g/4Pl0q
+  </data>
+ </layer>
+ <objectgroup id="4" name="Back">
+  <object id="1" name="TileData" x="0" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="2" name="TileData" x="16" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="3" name="TileData" x="32" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="4" name="TileData" x="48" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="5" name="TileData" x="64" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="6" name="TileData" x="80" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="7" name="TileData" x="96" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="8" name="TileData" x="112" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="9" name="TileData" x="128" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="10" name="TileData" x="144" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="11" name="TileData" x="160" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="12" name="TileData" x="176" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="13" name="TileData" x="192" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="14" name="TileData" x="208" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="15" name="TileData" x="224" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="16" name="TileData" x="240" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="17" name="TileData" x="256" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="18" name="TileData" x="272" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="19" name="TileData" x="288" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="20" name="TileData" x="304" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="21" name="TileData" x="320" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="22" name="TileData" x="336" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="23" name="TileData" x="352" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="24" name="TileData" x="416" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="25" name="TileData" x="432" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="26" name="TileData" x="448" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="27" name="TileData" x="464" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="28" name="TileData" x="480" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="29" name="TileData" x="496" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="30" name="TileData" x="512" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="31" name="TileData" x="528" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="32" name="TileData" x="544" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="33" name="TileData" x="560" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="34" name="TileData" x="576" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="35" name="TileData" x="592" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="36" name="TileData" x="608" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="37" name="TileData" x="624" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="38" name="TileData" x="640" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="39" name="TileData" x="656" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="40" name="TileData" x="672" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="41" name="TileData" x="688" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="42" name="TileData" x="704" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="43" name="TileData" x="720" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="44" name="TileData" x="736" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="45" name="TileData" x="752" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="46" name="TileData" x="768" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="47" name="TileData" x="784" y="336" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="48" name="TileData" x="0" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="49" name="TileData" x="16" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="50" name="TileData" x="32" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="51" name="TileData" x="48" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="52" name="TileData" x="64" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="53" name="TileData" x="80" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="54" name="TileData" x="96" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="55" name="TileData" x="112" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="56" name="TileData" x="128" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="57" name="TileData" x="144" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="58" name="TileData" x="160" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="59" name="TileData" x="176" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="60" name="TileData" x="192" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="61" name="TileData" x="208" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="62" name="TileData" x="224" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="63" name="TileData" x="240" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="64" name="TileData" x="256" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="65" name="TileData" x="272" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="66" name="TileData" x="288" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="67" name="TileData" x="304" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="68" name="TileData" x="320" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="69" name="TileData" x="336" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="70" name="TileData" x="352" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="71" name="TileData" x="416" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="72" name="TileData" x="432" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="73" name="TileData" x="448" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="74" name="TileData" x="464" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="75" name="TileData" x="480" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="76" name="TileData" x="496" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="77" name="TileData" x="512" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="78" name="TileData" x="528" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="79" name="TileData" x="544" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="80" name="TileData" x="560" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="81" name="TileData" x="576" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="82" name="TileData" x="592" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="83" name="TileData" x="608" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="84" name="TileData" x="624" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="85" name="TileData" x="640" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="86" name="TileData" x="656" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="87" name="TileData" x="672" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="88" name="TileData" x="688" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="89" name="TileData" x="704" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="90" name="TileData" x="720" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="91" name="TileData" x="736" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="92" name="TileData" x="752" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="93" name="TileData" x="768" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="94" name="TileData" x="784" y="352" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="95" name="TileData" x="0" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="96" name="TileData" x="16" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="97" name="TileData" x="32" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="98" name="TileData" x="48" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="99" name="TileData" x="64" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="100" name="TileData" x="80" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="101" name="TileData" x="96" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="102" name="TileData" x="112" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="103" name="TileData" x="128" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="104" name="TileData" x="144" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="105" name="TileData" x="160" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="106" name="TileData" x="176" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="107" name="TileData" x="192" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="108" name="TileData" x="208" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="109" name="TileData" x="224" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="110" name="TileData" x="240" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="111" name="TileData" x="256" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="112" name="TileData" x="272" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="113" name="TileData" x="288" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="114" name="TileData" x="304" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="115" name="TileData" x="320" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="116" name="TileData" x="336" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="117" name="TileData" x="352" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="118" name="TileData" x="416" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="119" name="TileData" x="432" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="120" name="TileData" x="448" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="121" name="TileData" x="464" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="122" name="TileData" x="480" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="123" name="TileData" x="496" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="124" name="TileData" x="512" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="125" name="TileData" x="528" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="126" name="TileData" x="544" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="127" name="TileData" x="560" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="128" name="TileData" x="576" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="129" name="TileData" x="592" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="130" name="TileData" x="608" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="131" name="TileData" x="624" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="132" name="TileData" x="640" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="133" name="TileData" x="656" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="134" name="TileData" x="672" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="135" name="TileData" x="688" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="136" name="TileData" x="704" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="137" name="TileData" x="720" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="138" name="TileData" x="736" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="139" name="TileData" x="752" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="140" name="TileData" x="768" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="141" name="TileData" x="784" y="368" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="142" name="TileData" x="0" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="143" name="TileData" x="16" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="144" name="TileData" x="32" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="145" name="TileData" x="48" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="146" name="TileData" x="64" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="147" name="TileData" x="80" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="148" name="TileData" x="96" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="149" name="TileData" x="112" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="150" name="TileData" x="128" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="151" name="TileData" x="144" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="152" name="TileData" x="160" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="153" name="TileData" x="176" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="154" name="TileData" x="192" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="155" name="TileData" x="208" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="156" name="TileData" x="224" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="157" name="TileData" x="240" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="158" name="TileData" x="256" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="159" name="TileData" x="272" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="160" name="TileData" x="288" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="161" name="TileData" x="304" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="162" name="TileData" x="320" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="163" name="TileData" x="336" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="164" name="TileData" x="352" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="165" name="TileData" x="416" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="166" name="TileData" x="432" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="167" name="TileData" x="448" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="168" name="TileData" x="464" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="169" name="TileData" x="480" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="170" name="TileData" x="496" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="171" name="TileData" x="512" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="172" name="TileData" x="528" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="173" name="TileData" x="544" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="174" name="TileData" x="560" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="175" name="TileData" x="576" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="176" name="TileData" x="592" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="177" name="TileData" x="608" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="178" name="TileData" x="624" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="179" name="TileData" x="640" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="180" name="TileData" x="656" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="181" name="TileData" x="672" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="182" name="TileData" x="688" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="183" name="TileData" x="704" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="184" name="TileData" x="720" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="185" name="TileData" x="736" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="186" name="TileData" x="752" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="187" name="TileData" x="768" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="188" name="TileData" x="784" y="384" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="189" name="TileData" x="0" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="190" name="TileData" x="16" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="191" name="TileData" x="32" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="192" name="TileData" x="48" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="193" name="TileData" x="64" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="194" name="TileData" x="80" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="195" name="TileData" x="96" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="196" name="TileData" x="112" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="197" name="TileData" x="128" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="198" name="TileData" x="144" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="199" name="TileData" x="160" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="200" name="TileData" x="176" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="201" name="TileData" x="192" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="202" name="TileData" x="208" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="203" name="TileData" x="224" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="204" name="TileData" x="240" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="205" name="TileData" x="256" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="206" name="TileData" x="272" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="207" name="TileData" x="288" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="208" name="TileData" x="304" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="209" name="TileData" x="320" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="210" name="TileData" x="336" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="211" name="TileData" x="352" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="212" name="TileData" x="416" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="213" name="TileData" x="432" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="214" name="TileData" x="448" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="215" name="TileData" x="464" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="216" name="TileData" x="480" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="217" name="TileData" x="496" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="218" name="TileData" x="512" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="219" name="TileData" x="528" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="220" name="TileData" x="544" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="221" name="TileData" x="560" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="222" name="TileData" x="576" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="223" name="TileData" x="592" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="224" name="TileData" x="608" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="225" name="TileData" x="624" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="226" name="TileData" x="640" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="227" name="TileData" x="656" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="228" name="TileData" x="672" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="229" name="TileData" x="688" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="230" name="TileData" x="704" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="231" name="TileData" x="720" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="232" name="TileData" x="736" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="233" name="TileData" x="752" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="234" name="TileData" x="768" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="235" name="TileData" x="784" y="400" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="236" name="TileData" x="0" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="237" name="TileData" x="16" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="238" name="TileData" x="32" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="239" name="TileData" x="48" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="240" name="TileData" x="64" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="241" name="TileData" x="80" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="242" name="TileData" x="96" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="243" name="TileData" x="112" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="244" name="TileData" x="128" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="245" name="TileData" x="144" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="246" name="TileData" x="160" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="247" name="TileData" x="176" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="248" name="TileData" x="192" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="249" name="TileData" x="208" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="250" name="TileData" x="224" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="251" name="TileData" x="240" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="252" name="TileData" x="256" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="253" name="TileData" x="272" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="254" name="TileData" x="288" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="255" name="TileData" x="304" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="256" name="TileData" x="320" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="257" name="TileData" x="336" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="258" name="TileData" x="352" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="259" name="TileData" x="416" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="260" name="TileData" x="432" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="261" name="TileData" x="448" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="262" name="TileData" x="464" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="263" name="TileData" x="480" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="264" name="TileData" x="496" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="265" name="TileData" x="512" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="266" name="TileData" x="528" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="267" name="TileData" x="544" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="268" name="TileData" x="560" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="269" name="TileData" x="576" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="270" name="TileData" x="592" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="271" name="TileData" x="608" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="272" name="TileData" x="624" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="273" name="TileData" x="640" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="274" name="TileData" x="656" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="275" name="TileData" x="672" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="276" name="TileData" x="688" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="277" name="TileData" x="704" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="278" name="TileData" x="720" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="279" name="TileData" x="736" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="280" name="TileData" x="752" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="281" name="TileData" x="768" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="282" name="TileData" x="784" y="416" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="283" name="TileData" x="0" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="284" name="TileData" x="16" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="285" name="TileData" x="32" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="286" name="TileData" x="48" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="287" name="TileData" x="64" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="288" name="TileData" x="80" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="289" name="TileData" x="96" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="290" name="TileData" x="112" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="291" name="TileData" x="128" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="292" name="TileData" x="144" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="293" name="TileData" x="160" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="294" name="TileData" x="176" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="295" name="TileData" x="192" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="296" name="TileData" x="208" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="297" name="TileData" x="224" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="298" name="TileData" x="240" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="299" name="TileData" x="256" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="300" name="TileData" x="272" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="301" name="TileData" x="288" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="302" name="TileData" x="304" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="303" name="TileData" x="320" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="304" name="TileData" x="336" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="305" name="TileData" x="352" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="306" name="TileData" x="416" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="307" name="TileData" x="432" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="308" name="TileData" x="448" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="309" name="TileData" x="464" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="310" name="TileData" x="480" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="311" name="TileData" x="496" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="312" name="TileData" x="512" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="313" name="TileData" x="528" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="314" name="TileData" x="544" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="315" name="TileData" x="560" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="316" name="TileData" x="576" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="317" name="TileData" x="592" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="318" name="TileData" x="608" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="319" name="TileData" x="624" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="320" name="TileData" x="640" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="321" name="TileData" x="656" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="322" name="TileData" x="672" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="323" name="TileData" x="688" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="324" name="TileData" x="704" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="325" name="TileData" x="720" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="326" name="TileData" x="736" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="327" name="TileData" x="752" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="328" name="TileData" x="768" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+  <object id="329" name="TileData" x="784" y="432" width="16" height="16">
+   <properties>
+    <property name="Water" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="5" name="Paths" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt18ENgCAMQFFGMiTO4YLiBLqJQ3nQREI0obSKmP9OXFqg7QGcAwAAAPBnS3euvZfHhyN+KIjF7qp2cV+00lwWuSfD8wFo19rXPgGQh1n9nvg9onlXjMJYyV7S3IBW7T+V5R/kDVb1au3eKBMy+zw/NA93eZk/AACAOjbw7BKn
+  </data>
+ </layer>
+ <objectgroup id="6" name="Paths"/>
+ <layer id="7" name="Buildings-1" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt11EKgzAMgGHB4X0sDK81z+c1dgEP4IPPe/FJJsWKi6lNxv89KZg0bbTUqgIAAAAQa8L3ug7p51IeghhvGsEc45i9HO9WVs9ZufPnHH9Sql3SuzuV7tGq60pXgK05HN/jnPEpj/0IYq+MZ5lkLa7kpW++9NH+9GK/csH6+cgrjXNd7rOhld4PyvPUzvdPvK5NqXfVyv/ZVqqmX3tr5fsHAACAvgUXlhxr
+  </data>
+ </layer>
+ <objectgroup id="8" name="Buildings-1"/>
+ <layer id="9" name="Buildings" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt2ElwFFUcx/GmEE1ywe0Mo1QpEMFJCmpCiBghuLIkkBxMIolyEkQS8aCluC8X3JebLAESveDColWUbILLTUlQsEoIiMomCiKJ4MHvq/Rz/ry87ulJ9zANxb/qU0063e/9/vPeZHqYWeo4My85xw0Jx7kRIzEKo1GMmzAGY3Ezkon8Z/WTIl8ZJqAcE1GBWzAJt6ISt8W4D1V3ku8u3I17MA3TMUPlRjVqMCvh/F/5zi0Vl7B3cC/56tGARtyHOWhCM+7HA5jr9qHuy3d2qYo8UzGPfPPxEBbgYSxEC1rxCBbhUbePqhj1oddC1RPkexKL8RSexjN4Fs/hebyAF8W+Ki6Jxx7Ta6FqCflewat4Da/jDbyJt/A23sG7oo+qGPQh10LVe+RbimVYjhVow0qswmq0o0P0oe7Xa5Kv/HItVK0h34f4CB/jE6zFOqzHBnyKz0QfU91xznc/tvy6NpNvC7ZiG77AduzAl/gKX+ObRP97ZT+5yv5H0nH+xAn8hL3Yh27sxwFcxnXfku877EQnurAL3+MH7MYe/JhI36vvl+PK+YJmbEylFYv1lccCFKIIpxm7B734B2dwNtn3mu4n3wH8jIP4Bb/iNxzCYRzB0UT6Xn2/HFfOZ8ujjjK31sm9XdiVTK+vPF6H6zECQ3ElrsLVuAbXunvsJPn+win8jdPoQa/KjTM4i38T6Xv1/XJcOZ8tj8yrSvdxjJ9/x/Fk/32rqpx7J6ICIzEKoy3vjzAlx61w5yv3mMPMq/sYwvWX4wr3PrnvVc3mfC3q3N9P5jgl4j7UeJPdMevc+WZ75DHz6j6G8fNwJNzz5r6XVc81DWp/RtxHoztuvWVcM4+ZV/ehqoxzE9zz5r7Pd5l5VM4ykU33Uc25mphkDloqb7VYj3b+9naU5uYoK5fzqOPxIt77Rbk5ysrVHPp4gl5OloY7mueUB1Pn9rEglf042RxzVdVGH7Up+3VxL9t6XIh1aT3iVed7PVp4r7f6yPR7L7b1aCkNpjXgdfL6C+1zXFeN5bnEq8znTFnm/zGErdoMY/llUT1sLPHO5Pfc6/UdPYqy5fHLor8femXK1XNvprW05fHLUlVi31d+82Ra/yAlc0axP73eH7bXI+r3g99cfvPZzmd6nweZL1flNZ88r/eG2UcL51tj9nc4SKZs1sOrwn7+RPH5lamPhpitjVdFsR6qKguCX/vyeMeZMoh9Pqjv37Z7/V4/2+9UD22Dw1mJZrK8xDPOscHB+1F1alzfvStCZlDG0MtYLBnqVA5Udun7V5i5tdvp4Q61twpDCFth5nZdbH10FwycWW3s+1VY7WpHB97HB+P6Xx9mbq2JHpojXo+NZP0cm1ybsQVbsc3SRxTr8Rg9PH4R7CtV2TwDmtfOSUXPbz6vTKqyeQY0rz0iPjMG8r3CHCPoPeY1fhXktZAZBvpMrMYIsycyVZBcfq9l0FJjhNkTqv4Dt2oQCw==
+  </data>
+ </layer>
+ <objectgroup id="10" name="Buildings">
+  <object id="330" name="TileData" x="368" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Warp 40 51 NIVInnerInsec"/>
+   </properties>
+  </object>
+  <object id="331" name="TileData" x="384" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Warp 40 51 NIVInnerInsec"/>
+   </properties>
+  </object>
+  <object id="332" name="TileData" x="400" y="208" width="16" height="16">
+   <properties>
+    <property name="Action" value="Warp 40 51 NIVInnerInsec"/>
+   </properties>
+  </object>
+  <object id="333" name="TileData" x="496" y="624" width="16" height="16">
+   <properties>
+    <property name="Action" value="NatInValley_ReturnHome"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer id="11" name="Buildings2" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztzrEJwCAUBNC/gbO4oEVmSMbQGbUNxEBII/Jed9wVFwEAwMrOHHHl791q6vjZJl/fOgD+Kemej/S8AwAAAACAHXSbawev
+  </data>
+ </layer>
+ <objectgroup id="12" name="Buildings2"/>
+ <layer id="13" name="Front" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJzt0lEKgnAMB+CfdJS6gEEQ9eYl9BJ50g6l4KtJJOo/+L6nMRgb2xIAAAAAAPjNo06e9dFTcBT3Z8mn32jHfFfY3+w1031lj7X132gKu01J+ltyrpJLNcVzlva39W5f1+R92rYHAMA/GACFSQll
+  </data>
+ </layer>
+ <objectgroup id="14" name="Front"/>
+ <layer id="15" name="AlwaysFront" width="50" height="50">
+  <data encoding="base64" compression="zlib">
+   eJztWcluE0EQtWQI+5IfYE3CcvJYYwkBAgFfEEFAAj6CnaOTcXJAEOBKYnLgzAUSxEeAuBDWsIjlyL4fQOK10i23e6q3WTxC+ElPHs90Vb+q6mnXjMfCUmnsP+Rtw7U6OMI5DEZgQ+Iw52hC/66cSmFb5xqvgJOcEwrZuSZ41RJLFjqpfEwR9vLxDa6faZ0GTZiR4hnV+KPmy7JeOrI4blr0U/E0c9BCxS6fo/IgziWJg+GWg28XbUXWQ46jE9TdE9T94Yt7nvP4MMl9VO9gPXz16fKg+qnzWtj2KV091P1Xp9O1LknrkDQGBrFnJfktSbr/ZlkHl1iS6qT2WLWWou/IKgYqlhGDNttebMt9FLb6Jtff7SSxTCjxRClqFCmsS9onc9CvxjIdtnqzJp9f1UTpbmg0C2a5fpLEpeoRfabQLHpptSctSrMrZkK6h+6iiy66+FcwWymVHlSKVuGH+5W47vc4/lBwHA8x/yPwsaOOd5W47p6gVFoU5KPPFR+h5xP42TGOhUFc91ocrys4jsWYfwm41FHHmiCue5tHDL71d8V6aNgAbvTQ4qNbhW/9fbEzg3XxBNqegnPgM41O3/rnqUm3Nr7g+1fwG/hdE0eS+qeBSZNubSyDtuXgCnClRaeoP7WP+8Bmb9KkWxt9+N4PDoCbwOfw/QJ8adBI7eM+sNmrmmSY1sYunNvNz/+A75/gL4NGah/3AWWv5k/WJF/bzs/Z9oZVuL4a7DWMo/ZxH1D2pvy55FbFZvjeAm7N+J7uq82zHxyoxa+b8ueS2ywwXraPGYL2g+Ch2vyxClP+8sqtiusOceSFqJyOjRTa5/h7jpGUGqIC82fCNYMu07UuaBzDejkOngBPgqfA0+AZ8GyH3pml7TUYzkHrefAC5zh4EbwEXibicJnT9szwFn7vSr5deo0kzyEmG5c5bc8Mv8P2WNRegeqzTD51fZlso45x6U+ovlDODXvnzmK5w+NQewWqFzA9h+h6B9lGHePSn1B9oZwb8f8Bq8krfH9daX9mpHoBU6+p6x1kG2qM+pyqjmF94Y6gvS+UcyPi+MNjYRzkY3uqdC9A+RTQ9Q6yDTVmMDD72Y/PA+CQJp/yfzpsfb0J4/f+XozbBy6oxn2Wq+3z7wla4xkoG9mnai9D9jNL5EzODfUflbj3GQ5jzBHwqKU3E/O4jLeNYevAxY+cm7/MqeeI
+  </data>
+ </layer>
+ <objectgroup id="16" name="AlwaysFront"/>
+</map>
