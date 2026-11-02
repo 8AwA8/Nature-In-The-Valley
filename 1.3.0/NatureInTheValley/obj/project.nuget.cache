@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "l2XUdma13I4=",
+  "success": true,
+  "projectFilePath": "/tmp/Nature-In-The-Valley/1.3.0/NatureInTheValley/NatureInTheValley.csproj",
+  "expectedPackageFiles": [
+    "/home/mtx/.nuget/packages/pathoschild.stardew.modbuildconfig/4.3.2/pathoschild.stardew.modbuildconfig.4.3.2.nupkg.sha512",
+    "/home/mtx/.nuget/packages/microsoft.netcore.app.ref/6.0.36/microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
+    "/home/mtx/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.36/microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512"
+  ],
+  "logs": []
+}

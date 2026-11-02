@@ -1,5 +1,5 @@
 {
-    "CommonButterfly": "0/false/0.005/0/1.75/true/true/0/false/spring,summer,fall,winter/0/1,1/600/1600/4/Mods\\NatureInTheValley\\Creatures\\CommonButterFly/0/0/0/80/1/60/15/Mods\\NatureInTheValley\\Creatures\\Items/CommonButterfly/Butterfly/32/32/ /2/false",
+    "CommonButterfly": "0/false/0.005/0/1.75/true/true/0/false/spring,summer,fall,winter/0/1,1/600/1600/4/Mods\\NatureInTheValley\\Creatures\\CommonButterfly/0/0/0/80/1/60/15/Mods\\NatureInTheValley\\Creatures\\Items/CommonButterfly/Butterfly/32/32/ /2/false",
     "Moth": "0/false/0.004/0/1.5/true/true/0/false/spring,summer,fall,winter/0/0,1/1900/2600/4/Mods\\NatureInTheValley\\Creatures\\Moth/0/0/0/50/65/32/11",
     "SmallGrassYellowButterfly": "0/false/0.007/0/1.6/true/true/1/false/summer,fall/1/0,1,2/1000/2000/4/Mods\\NatureInTheValley\\Creatures\\SmallGrassYellowButterfly/0/0/0/110/2/44/20",
     "GreenDarner": "0/false/0.008/0/1.4/true/true/1/false/spring,summer/0/1,1/600/2000/4/Mods\\NatureInTheValley\\Creatures\\GreenDarner/0/0/0/120/3/35/13",
@@ -69,7 +69,7 @@
     "FunnelWebSpider" : "3/true/0.006/1300/1.7/true/true/4/true/fall,spring/1/1,3/2000/2600/4/Mods\\NatureInTheValley\\Creatures\\FunnelWebSpider/-6/0/8/2100/47/15/13",
     "Axolotl" : "3/true/0.006/0/1.5/true/true/3/false/spring,summer,winter,fall/0/3,3/600/2600/3/Mods\\NatureInTheValley\\Creatures\\Axolotl/-7/3/0/2000/48/19/23",
     "GiantPetaltail": "3/false/0.009/0/2/true/true/1/false/summer,fall/0/1,1/800/1800/4/Mods\\NatureInTheValley\\Creatures\\GiantPetaltail/0/0/0/1800/49/56/18",
-    "YellowSpottedLizard" : "3/true/0.006/900/1.5/true/true/4/false/spring,summer,fall,winter/2/1,1/2000/2600/4/Mods\\NatureInTheValley\\Creatures\\YellowSpottedLizard/3/0/-4/2000/50/31/12",
+    "YellowSpottedLizard" : "3/true/0.006/900/1.5/true/true/4/false/spring,summer,fall,winter/0/4,4/2000/2600/4/Mods\\NatureInTheValley\\Creatures\\YellowSpottedLizard/3/0/-4/2000/50/31/12",
     "AtlasMoth": "3/false/0.007/0/1.95/true/false/5/false/spring,summer,fall/1/1,1/1700/2600/4/Mods\\NatureInTheValley\\Creatures\\AtlasMoth/2/1/0/4000/51/63.75/25.6",
     "AgriasButterfly": "2/false/0.007/0/2.0/true/true/3/false/spring,summer/1/1,2/1100/1700/4/Mods\\NatureInTheValley\\Creatures\\AgriasButterfly/1/0/0/2300/52/22/38",
     "DesertWhiteTail": "3/false/0.008/0/1.7/true/true/2/false/fall,winter/0/4,4/600/1600/4/Mods\\NatureInTheValley\\Creatures\\DesertWhiteTail/0/0/0/4500/53/66/38",

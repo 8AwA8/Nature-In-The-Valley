@@ -17,7 +17,7 @@ namespace NatureInTheValley
 		{
 			this.Item = item;
 			string text;
-			this.donated = Game1.getLocationFromName("NIVInnerInsec").modData.TryGetValue("NatureInTheValley/Donated/" + item.ItemId.Split("NatInValley.Creature.", StringSplitOptions.None)[1], out text);
+			this.donated = NatureInTheValleyEntry.TryGetInsectariumDonated(item.ItemId.Split("NatInValley.Creature.", StringSplitOptions.None)[1], out text);
 			this._title = (this.donated ? item.DisplayName : "????????");
 			this.width = 600 + IClickableMenu.borderWidth * 2;
 			this.height = 800 + IClickableMenu.borderWidth * 2;

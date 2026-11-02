@@ -1,0 +1,7 @@
+/tmp/Nature-In-The-Valley/1.3.0/NatureInTheValley/obj/Debug/net6.0/NatureInTheValley.csproj.AssemblyReference.cache
+/tmp/Nature-In-The-Valley/1.3.0/NatureInTheValley/obj/Debug/net6.0/NatureInTheValley.GeneratedMSBuildEditorConfig.editorconfig
+/tmp/Nature-In-The-Valley/1.3.0/NatureInTheValley/obj/Debug/net6.0/NatureInTheValley.csproj.CoreCompileInputs.cache
+/tmp/Nature-In-The-Valley/1.3.0/NatureInTheValley/obj/Debug/net6.0/NatureInTheValley.sourcelink.json
+/tmp/Nature-In-The-Valley/1.3.0/NatureInTheValley/bin/Debug/net6.0/NatureInTheValley.deps.json
+/tmp/Nature-In-The-Valley/1.3.0/NatureInTheValley/bin/Debug/net6.0/NatureInTheValley.dll
+/tmp/Nature-In-The-Valley/1.3.0/NatureInTheValley/obj/Debug/net6.0/NatureInTheValley.dll

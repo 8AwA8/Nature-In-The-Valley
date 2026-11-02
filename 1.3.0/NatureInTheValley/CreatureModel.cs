@@ -140,7 +140,6 @@ namespace NatureInTheValley
 		public CreatureModel()
 		{
 			this.variantGSQs = new List<string>();
-			base..ctor();
 			this.displayedLocation = "";
 			this.displayedLocalLocation = "";
 			this.isTerrariumable = true;

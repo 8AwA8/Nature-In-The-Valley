@@ -110,7 +110,7 @@ namespace NatureInTheValley
 			for (int i = 96 * this.currentPage; i < Math.Min(this.creatureCount, 96 * (this.currentPage + 1)); i++)
 			{
 				string text;
-				this.Collection[i].draw(b, Game1.getLocationFromName("NIVInnerInsec").modData.TryGetValue("NatureInTheValley/Donated/" + this.Collection[i].name.Split("NatInValley.Creature.", StringSplitOptions.None)[1], out text) ? Color.White : (Color.Black * 0.2f), 0.86f, 0, 0, 0);
+				this.Collection[i].draw(b, NatureInTheValleyEntry.TryGetInsectariumDonated(this.Collection[i].name.Split("NatInValley.Creature.", StringSplitOptions.None)[1], out text) ? Color.White : (Color.Black * 0.2f), 0.86f, 0, 0, 0);
 			}
 			b.End();
 			b.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, null, null, null, null);

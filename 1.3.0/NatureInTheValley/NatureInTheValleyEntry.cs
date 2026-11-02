@@ -1728,17 +1728,18 @@ namespace NatureInTheValley
 		// Token: 0x0600001D RID: 29 RVA: 0x000093B0 File Offset: 0x000075B0
 		public void CommandTwo(string common, string[] args)
 		{
-			GameLocation locationFromName = Game1.getLocationFromName("NIVInnerInsec");
+			GameLocation locationFromName = GetInsectariumLocation();
+			if (locationFromName == null || locationFromName.modData == null) return;
 			foreach (KeyValuePair<string, List<string>> keyValuePair in this.creatureData)
 			{
 				locationFromName.modData["NatureInTheValley/Donated/" + keyValuePair.Key] = "true";
 			}
 		}
 
-		// Token: 0x0600001E RID: 30 RVA: 0x00009428 File Offset: 0x00007628
 		public void CommandThree(string common, string[] args)
 		{
-			GameLocation locationFromName = Game1.getLocationFromName("NIVInnerInsec");
+			GameLocation locationFromName = GetInsectariumLocation();
+			if (locationFromName == null || locationFromName.modData == null) return;
 			foreach (KeyValuePair<string, List<string>> keyValuePair in this.creatureData)
 			{
 				locationFromName.modData.Remove("NatureInTheValley/Donated/" + keyValuePair.Key);
@@ -1760,7 +1761,7 @@ namespace NatureInTheValley
 			foreach (KeyValuePair<string, List<string>> keyValuePair in NatureInTheValleyEntry.staticCreatureData)
 			{
 				string text;
-				if (Game1.currentLocation.modData.TryGetValue("NatureInTheValley/Donated/" + keyValuePair.Key, out text))
+				if (TryGetInsectariumDonated(keyValuePair.Key, out text))
 				{
 					num++;
 				}
@@ -1779,7 +1780,7 @@ namespace NatureInTheValley
 						foreach (string str in keyValuePair2.Value.creatureRequirements)
 						{
 							string text2;
-							if (!Game1.currentLocation.modData.TryGetValue("NatureInTheValley/Donated/" + str, out text2))
+							if (!TryGetInsectariumDonated(str, out text2))
 							{
 								flag = false;
 							}
@@ -1921,7 +1922,7 @@ namespace NatureInTheValley
 			foreach (KeyValuePair<string, List<string>> keyValuePair in this.creatureData)
 			{
 				string text;
-				if (Game1.getLocationFromName("NIVInnerInsec").modData.TryGetValue("NatureInTheValley/Donated/" + keyValuePair.Key, out text))
+				if (TryGetInsectariumDonated(keyValuePair.Key, out text))
 				{
 					num++;
 				}
@@ -2133,15 +2134,40 @@ namespace NatureInTheValley
 		}
 
 		// Token: 0x0600002F RID: 47 RVA: 0x0000A31C File Offset: 0x0000851C
+		public static GameLocation GetInsectariumLocation()
+		{
+			return Game1.getLocationFromName("NIVInnerInsec");
+		}
+
+		public static bool IsInsectariumDonated(string creatureKey)
+		{
+			GameLocation loc = GetInsectariumLocation();
+			if (loc == null || loc.modData == null)
+			{
+				return false;
+			}
+			return loc.modData.ContainsKey("NatureInTheValley/Donated/" + creatureKey);
+		}
+
+		public static bool TryGetInsectariumDonated(string creatureKey, out string value)
+		{
+			value = null;
+			GameLocation loc = GetInsectariumLocation();
+			if (loc == null || loc.modData == null)
+			{
+				return false;
+			}
+			return loc.modData.TryGetValue("NatureInTheValley/Donated/" + creatureKey, out value);
+		}
+
 		public static bool DonatedTotalGSQ(string[] query, GameStateQueryContext context)
 		{
 			int num = 0;
 			int num2 = 0;
-			GameLocation locationFromName = Game1.getLocationFromName("NIVInnerInsec");
 			foreach (KeyValuePair<string, List<string>> keyValuePair in NatureInTheValleyEntry.staticCreatureData)
 			{
 				string text;
-				if (locationFromName.modData.TryGetValue("NatureInTheValley/Donated/" + keyValuePair.Key, out text))
+				if (TryGetInsectariumDonated(keyValuePair.Key, out text))
 				{
 					num++;
 				}
@@ -2150,14 +2176,14 @@ namespace NatureInTheValley
 					num2++;
 				}
 			}
-			return float.Parse(query[1]) <= (float)num / (float)num2;
+			return num2 > 0 && float.Parse(query[1]) <= (float)num / (float)num2;
 		}
 
-		// Token: 0x06000030 RID: 48 RVA: 0x0000A3DC File Offset: 0x000085DC
 		public static bool DonatedSpecificGSQ(string[] query, GameStateQueryContext context)
 		{
+			if (query == null || query.Length < 2) return false;
 			string text;
-			return Game1.getLocationFromName("NIVInnerInsec").modData.TryGetValue("NatureInTheValley/Donated/" + query[1], out text);
+			return TryGetInsectariumDonated(query[1], out text);
 		}
 
 		// Token: 0x06000031 RID: 49 RVA: 0x0000A40C File Offset: 0x0000860C
@@ -2435,12 +2461,12 @@ namespace NatureInTheValley
 		// Token: 0x0600003C RID: 60 RVA: 0x0000AE74 File Offset: 0x00009074
 		public Texture2D Decorate(Item input)
 		{
-			if (input.Category != -81 || !input.ItemId.Contains("NatInValley.Creature."))
+			if (input == null || input.Category != -81 || string.IsNullOrEmpty(input.ItemId) || !input.ItemId.Contains("NatInValley.Creature."))
 			{
 				return null;
 			}
 			string text;
-			if (!Game1.getLocationFromName("NIVInnerInsec").modData.TryGetValue("NatureInTheValley/Donated/" + input.Name, out text))
+			if (!TryGetInsectariumDonated(input.Name, out text))
 			{
 				return this.helper.ModContent.Load<Texture2D>("PNGs/Icon.png");
 			}
@@ -2850,9 +2876,17 @@ namespace NatureInTheValley
 		// Token: 0x06000049 RID: 73 RVA: 0x0000D0B4 File Offset: 0x0000B2B4
 		public void ClearUnclaimedCreatures(GameLocation newlocation)
 		{
+			if (newlocation == null) return;
 			for (int i = 0; i < NatureInTheValleyEntry.creatures.Count; i++)
 			{
-				if (NatureInTheValleyEntry.creatures[i].GetLocation().Name != newlocation.Name && !NatureInTheValleyEntry.creatures[i].released)
+				if (NatureInTheValleyEntry.creatures[i] == null)
+				{
+					NatureInTheValleyEntry.creatures.RemoveAt(i);
+					i--;
+					continue;
+				}
+				GameLocation loc = NatureInTheValleyEntry.creatures[i].GetLocation();
+				if (loc == null || (loc.Name != newlocation.Name && !NatureInTheValleyEntry.creatures[i].released))
 				{
 					NatureInTheValleyEntry.creatures.RemoveAt(i);
 					i--;
@@ -2890,16 +2924,19 @@ namespace NatureInTheValley
 		// Token: 0x0600004C RID: 76 RVA: 0x0000D598 File Offset: 0x0000B798
 		private static void Ticking(GameTime gameTime)
 		{
-			if (!Game1.shouldTimePass(false) || Game1.currentLocation == null)
+			if (!Game1.shouldTimePass(false) || Game1.currentLocation == null || Game1.player == null)
 			{
 				return;
 			}
 			for (int i = 0; i < NatureInTheValleyEntry.creatures.Count; i++)
 			{
-				if (NatureInTheValleyEntry.creatures[i].GetLocation().Name == Game1.currentLocation.Name && Vector2.Distance(NatureInTheValleyEntry.creatures[i].Position, Game1.player.Position) < 2000f)
+				NatCreature creature = NatureInTheValleyEntry.creatures[i];
+				if (creature == null) continue;
+				GameLocation loc = creature.GetLocation();
+				if (loc != null && loc.Name == Game1.currentLocation.Name && Vector2.Distance(creature.Position, Game1.player.Position) < 2000f)
 				{
-					NatureInTheValleyEntry.creatures[i].Update(gameTime);
-					NatureInTheValleyEntry.creatures[i].UpdateAnim(gameTime);
+					creature.Update(gameTime);
+					creature.UpdateAnim(gameTime);
 				}
 			}
 		}
@@ -2932,7 +2969,16 @@ namespace NatureInTheValley
 		// Token: 0x0600004E RID: 78 RVA: 0x0000D704 File Offset: 0x0000B904
 		public static string descriptCover(string __result, StardewValley.Object __instance)
 		{
-			if (!__instance.ItemId.Contains("NatInValley.Creature.") || Game1.getLocationFromName("NIVInnerInsec").modData.ContainsKey("NatureInTheValley/Donated/" + __instance.ItemId.Split("NatInValley.Creature.", StringSplitOptions.None)[1]))
+			if (__instance == null || string.IsNullOrEmpty(__instance.ItemId) || !__instance.ItemId.Contains("NatInValley.Creature."))
+			{
+				return __result;
+			}
+			string[] parts = __instance.ItemId.Split("NatInValley.Creature.", StringSplitOptions.None);
+			if (parts.Length < 2)
+			{
+				return __result;
+			}
+			if (IsInsectariumDonated(parts[1]))
 			{
 				return __result;
 			}
