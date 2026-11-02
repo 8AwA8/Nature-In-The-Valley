@@ -9,7 +9,7 @@
         {
             "Action": "Load",
             "Target": "Mods/NatureInTheValley/Maps/InsectariumInterior",
-            "FromFile": "MapStuff/{{TargetWithoutPath}}.tbin"
+            "FromFile": "MapStuff/{{TargetWithoutPath}}.tmx"
         },
    	{
       "Action": "EditData",
