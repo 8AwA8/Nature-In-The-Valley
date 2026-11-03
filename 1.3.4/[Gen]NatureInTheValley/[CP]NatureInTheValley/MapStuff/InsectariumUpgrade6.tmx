@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="80" height="55" tilewidth="16" tileheight="16" infinite="0" nextlayerid="177" nextobjectid="187">
+ <properties>
+  <property name="Light" value="33 45 4 48 38 8 49 38 8"/>
+ </properties>
+ <tileset firstgid="1" name="furniture" tilewidth="16" tileheight="16" tilecount="2976" columns="32">
+  <image source="furniture.png" trans="000000" width="512" height="1488"/>
+ </tileset>
+ <tileset firstgid="2977" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="5153" name="townInterior_2" tilewidth="16" tileheight="16" tilecount="1312" columns="32">
+  <image source="townInterior_2" width="512" height="656"/>
+ </tileset>
+ <tileset firstgid="6465" name="InsectariumTiles" tilewidth="16" tileheight="16" tilecount="198" columns="11">
+  <image source="InsectariumTiles.png" trans="000000" width="176" height="288"/>
+ </tileset>
+ <layer id="17" name="Buildings" width="80" height="55">
+  <data encoding="base64" compression="zlib">
+   eJzt0KsNgEAARMF1yNO0ClUClfDznKABBIFLZpLnN5sAAAAAAAAAAAAAAAB/N5VkvlvK12vas9bPtrv9wX9Dn4y1o0vO7r19AAAAANCyC2iVCqc=
+  </data>
+ </layer>
+ <objectgroup id="18" name="Buildings"/>
+ <layer id="175" name="Buildings1" width="80" height="55">
+  <data encoding="base64" compression="zlib">
+   eJzt0KENgEAURMHvqOH67wOwHGXgsVhW0sFBmEme32wVAAAAAAAAAAAAAPAHR6ua05LWNnrN95z5bEs97Y//rmncJgAAAAAAeIMbHj4IMw==
+  </data>
+ </layer>
+ <objectgroup id="176" name="Buildings1"/>
+ <layer id="77" name="Front" width="80" height="55">
+  <properties>
+   <property name="Light" value="16 7 1 9 4 1 10 4 1 6 5 1 5 5 1"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJzt07ENg1AMBFB3qQg18zAQkUgGYCRgFRCMgwsGSMUX4j3pOlu65iIAAAAAAAAAAAAAgCfbXqUb8BRjHTGdmevSbe6nbyK+mV9mb/7/6/L2k1ly66u9AwAXat8RQ1W6BQAAcIUD/D4KIg==
+  </data>
+ </layer>
+ <objectgroup id="78" name="Front"/>
+ <layer id="135" name="AlwaysFront" width="80" height="55">
+  <data encoding="base64" compression="zlib">
+   eJzt17EJwkAUBuDXxDSijRbJPA7hAE4iruEWWjqFts4gqJUieEVAQS0SlCh+H1zz4OC/vzh4EQAAAAAAAAAAAAC0rcwjpv3H+bPZvfnwM3m+0bZ666mIOBf17++6EZNexHhwm63+qL9L9dasjOiU7WaBphbpr1zmbacAAKCOddpFNg13r0n23iy/Zp96O6RzbNjfLPU36r03EwAAvHIFg4cQrw==
+  </data>
+ </layer>
+ <objectgroup id="136" name="AlwaysFront"/>
+</map>

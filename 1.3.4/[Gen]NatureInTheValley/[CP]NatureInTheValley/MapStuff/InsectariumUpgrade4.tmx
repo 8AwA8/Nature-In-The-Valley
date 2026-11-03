@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="80" height="55" tilewidth="16" tileheight="16" infinite="0" nextlayerid="175" nextobjectid="187">
+ <tileset firstgid="1" name="townInterior_2" tilewidth="16" tileheight="16" tilecount="1312" columns="32">
+  <image source="townInterior_2" width="512" height="656"/>
+ </tileset>
+ <tileset firstgid="1313" name="furniture" tilewidth="16" tileheight="16" tilecount="2976" columns="32">
+  <image source="furniture.png" trans="000000" width="512" height="1488"/>
+ </tileset>
+ <tileset firstgid="4289" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="6465" name="townInterior_2" tilewidth="16" tileheight="16" tilecount="1312" columns="32">
+  <image source="townInterior_2" width="512" height="656"/>
+ </tileset>
+ <layer id="11" name="Buildings-3" width="80" height="55">
+  <data encoding="base64" compression="zlib">
+   eJzt1UkKwkAARNG+gQ3OxFs4i7dwuJPDrVyp2avoPcRhYQUjRFxoDE7tf1CkFylI1ybGAAAAAAAAAAAAAAAAAAAAAADwWgPPmKEyChOcx97jvWj3kZ5rprrzTJmHCc5+ZIe0NSajZJWcve1Fu/4f7ndPWZtVlKpSs/ffx7WONusqPaXPfsBXm2Q//QW/ZZEyZqmslLWySb2n64qt7nxQduHzGGODS3f/RNcVwQaePe8XPEsx/rFJuq7I684FpWjjb5Ck64q67txQmkpLacfYIEkXAAD8thPH5DOc
+  </data>
+ </layer>
+ <objectgroup id="12" name="Buildings-3"/>
+ <layer id="19" name="Buildings" width="80" height="55">
+  <data encoding="base64" compression="zlib">
+   eJztzkERAAAIA6D1MLOdTbHzAwlIAAAAAAAAAAAAAAAAAAAAaNn5HgBA1wHPwQCp
+  </data>
+ </layer>
+ <objectgroup id="20" name="Buildings"/>
+ <layer id="81" name="Front" width="80" height="55">
+  <data encoding="base64" compression="zlib">
+   eJztzjERAAAIBKA/+9i/ngmcdYAEJAAAAAAAAAAAAAAAAAAAALuu6wEA8NkAxOEAMA==
+  </data>
+ </layer>
+ <objectgroup id="82" name="Front"/>
+ <layer id="137" name="AlwaysFront" width="80" height="55">
+  <data encoding="base64" compression="zlib">
+   eJztzkEJAAAIBLDDv/3rGkM4tgRLAAAAAAAAAAAAAAAAAACg2873AACg1wHSEgAQ
+  </data>
+ </layer>
+ <objectgroup id="138" name="AlwaysFront"/>
+</map>

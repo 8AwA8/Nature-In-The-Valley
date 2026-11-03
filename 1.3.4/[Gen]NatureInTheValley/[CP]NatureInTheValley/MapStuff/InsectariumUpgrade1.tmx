@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="80" height="55" tilewidth="16" tileheight="16" infinite="0" nextlayerid="175" nextobjectid="187">
+ <tileset firstgid="1" name="townInterior_2" tilewidth="16" tileheight="16" tilecount="1312" columns="32">
+  <image source="townInterior_2" width="512" height="656"/>
+ </tileset>
+ <layer id="5" name="Buildings-3" width="80" height="55">
+  <data encoding="base64" compression="zlib">
+   eJzt1kkKwkAQBdCm7xbna8QJr+HsoS1wEzQSIdGF/R58alWL+qtKCQAAAAAAAAAAAAAAAF5VOaVxZNQyJ3n4vX9Tx62ryLJlriPTyDwya8xF7t4rxT5uPUYOLfMU2US2T9nl7j0e3vXHZ/TXzzm6ujZyidz0x49Vhf0lQ6sL+0uGpr9+9NeP/oBvuQMy/iQg
+  </data>
+ </layer>
+ <objectgroup id="10" name="Buildings-3"/>
+</map>
