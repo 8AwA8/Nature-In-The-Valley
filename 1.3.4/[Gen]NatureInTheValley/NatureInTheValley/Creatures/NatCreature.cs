@@ -630,7 +630,7 @@ namespace Creatures
 			{
 				if (!this.ValidPosition(this.GetEffectivePosition() + zero / 2f))
 				{
-					return farmer.Position;
+					return Vector2.Zero;
 				}
 				if (this.ValidPosition(this.GetEffectivePosition() + zero))
 				{
