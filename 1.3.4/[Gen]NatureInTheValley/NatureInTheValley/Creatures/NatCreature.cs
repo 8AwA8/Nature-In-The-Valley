@@ -49,7 +49,7 @@ namespace Creatures
 			Vector2 position = this.Position;
 			if (this.useBetterBounds)
 			{
-				return new Rectangle((int)position.X + 8, (int)position.Y + 16, (int)((float)this.Sprite.SpriteWidth * this.scale * this.addedScale * 1.2f), (int)((double)((float)this.Sprite.SpriteHeight * this.scale * this.addedScale * 1.2f) * 1.3 - (double)((float)(this.IsGrounded ? 0 : 90))));
+				return new Rectangle((int)position.X + 8, (int)position.Y + 16, (int)((float)this.Sprite.SpriteWidth * this.scale * this.addedScale * 1.2f), Math.Max(1, (int)((double)((float)this.Sprite.SpriteHeight * this.scale * this.addedScale * 1.2f) * 1.3 - (double)((float)(this.IsGrounded ? 0 : 90)))));
 			}
 			return new Rectangle((int)position.X + 8, (int)position.Y + 16, this.Sprite.SpriteWidth, this.Sprite.SpriteHeight + ((this.scale > 3f && this.IsGrounded) ? 12 : 0));
 		}
