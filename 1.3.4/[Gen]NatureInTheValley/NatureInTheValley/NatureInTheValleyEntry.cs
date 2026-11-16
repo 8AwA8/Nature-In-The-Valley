@@ -2202,7 +2202,7 @@ namespace NatureInTheValley
 		{
 			for (int i = 0; i < 10; i++)
 			{
-				Vector2 vector = new Vector2((float)Game1.random.Next(Game1.currentLocation.map.Layers[0].TileWidth), (float)Game1.random.Next(Game1.currentLocation.map.Layers[0].TileHeight));
+				Vector2 vector = new Vector2((float)Game1.random.Next(l.map.Layers[0].LayerWidth), (float)Game1.random.Next(l.map.Layers[0].LayerHeight));
 				if (l.CanSpawnCharacterHere(vector))
 				{
 					return vector;
@@ -2261,11 +2261,11 @@ namespace NatureInTheValley
 			{
 
 				List<Vector2> list = (this.treePos != null) ? this.treePos : this.GetTrees(location);
-				if (list.Count < 2)
+				if (list.Count == 0)
 				{
 					return;
 				}
-				Vector2 vector2 = list[(int)(Game1.random.NextDouble() * (double)(list.Count - 1))] + new Vector2(-0.25f, 0.55f);
+				Vector2 vector2 = list[Game1.random.Next(list.Count)] + new Vector2(-0.25f, 0.55f);
 				if (this.CheckForBugAtTile(location, vector2 * 64f, 64f))
 				{
 					return;
@@ -2287,11 +2287,11 @@ namespace NatureInTheValley
 			else if (localSpawnCode == "2")
 			{
 				List<Vector2> list2 = (this.bushPos != null) ? this.bushPos : this.GetBushes(location);
-				if (list2.Count < 2)
+				if (list2.Count == 0)
 				{
 					return;
 				}
-				Vector2 vector4 = list2[Game1.random.Next(list2.Count - 1)];
+				Vector2 vector4 = list2[Game1.random.Next(list2.Count)];
 				if (this.CheckForBugAtTile(location, vector4 * 64f, 64f))
 				{
 					return;
@@ -2312,11 +2312,11 @@ namespace NatureInTheValley
 			else if (localSpawnCode == "4")
 			{
 				List<Vector2> list3 = (this.stumpPos != null) ? this.stumpPos : this.GetStumps(location);
-				if (list3.Count < 2)
+				if (list3.Count == 0)
 				{
 					return;
 				}
-				Vector2 vector6 = list3[Game1.random.Next(list3.Count - 1)];
+				Vector2 vector6 = list3[Game1.random.Next(list3.Count)];
 				if (this.CheckForBugAtTile(location, vector6 * 64f, 64f))
 				{
 					return;
@@ -2339,11 +2339,11 @@ namespace NatureInTheValley
 			{
 				//Monitor.Log("Water Spawn start: " + sw.Elapsed.TotalMilliseconds + "ms", LogLevel.Warn);
 				List<Vector2> list4 = (this.waterPos != null) ? this.waterPos : this.GetWater(location);
-				if (list4.Count < 2)
+				if (list4.Count == 0)
 				{
 					return;
 				}
-				Vector2 vector8 = list4[Game1.random.Next(list4.Count - 1)];
+				Vector2 vector8 = list4[Game1.random.Next(list4.Count)];
 				//Monitor.Log("Water Spawn preinit: " + sw.Elapsed.TotalMilliseconds + "ms", LogLevel.Warn);
 				this.Instantiate(text, vector8, location);
 				//Monitor.Log("Water Spawn postinit: " + sw.Elapsed.TotalMilliseconds + "ms", LogLevel.Warn);
